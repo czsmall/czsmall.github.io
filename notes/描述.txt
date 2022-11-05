@@ -1,0 +1,5 @@
+layout: wiki  //layout: post
+
+  layout参数决定了，独立页 是以文章目录的形式显示还是以项目。。。。配饰定义的样式显示
+
+menu_id: notes  ：可以指定在首页的菜单栏直接点开到次页面
