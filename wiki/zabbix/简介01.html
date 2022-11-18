@@ -20,18 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Zabbix专栏：项目背景介绍 - 初学者</title>
+  <title>Zabbix专栏：docker简介 - 初学者</title>
 
   
-    <meta name="description" content="就将计就计123 水水水水水s456">
+    <meta name="description" content="简介介绍   统称来说，容器是一种工具，指的是可以装下其它物品的工具，以方便人类归纳放置物品、存储和异地运输，具体来说比如人类使用的衣柜、行李箱、背包等可以成为容器，但今天我们所说的容器是一种 IT 技术。 Docker 的组成 Docker 主机(Host)： 一个物理机或虚拟机， 用于运行 Docker 服务进程和容器。 Docker 服务端(Server)： Docker 守护进程， 运行">
 <meta property="og:type" content="website">
-<meta property="og:title" content="项目背景介绍">
-<meta property="og:url" content="https://czsmall.github.io/wiki/zabbix/%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="docker简介">
+<meta property="og:url" content="https://czsmall.github.io/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">
 <meta property="og:site_name" content="初学者">
-<meta property="og:description" content="就将计就计123 水水水水水s456">
+<meta property="og:description" content="简介介绍   统称来说，容器是一种工具，指的是可以装下其它物品的工具，以方便人类归纳放置物品、存储和异地运输，具体来说比如人类使用的衣柜、行李箱、背包等可以成为容器，但今天我们所说的容器是一种 IT 技术。 Docker 的组成 Docker 主机(Host)： 一个物理机或虚拟机， 用于运行 Docker 服务进程和容器。 Docker 服务端(Server)： Docker 守护进程， 运行">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-18T05:29:19.741Z">
-<meta property="article:modified_time" content="2022-11-11T05:52:40.992Z">
+<meta property="article:published_time" content="2022-11-18T08:53:25.038Z">
+<meta property="article:modified_time" content="2022-11-18T08:30:28.281Z">
 <meta property="article:author" content="Harvey">
 <meta property="article:tag" content="初学者">
 <meta name="twitter:card" content="summary">
@@ -73,13 +73,13 @@
 
 <header class="header">
 
-<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/zabbix/index.html"><div class="main" ff="title">Zabbix专栏</div><div class="sub cap">专栏2测试用的副标题</div></a></div>
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><div class="main" ff="title">Zabbix专栏</div><div class="sub cap">专栏2测试用的副标题</div></a></div>
 </header>
 
 
 <div class="widgets">
 
-<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【常用配置】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/index.html"><span class="toc-text">分页标签</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/index%20-%20%E5%89%AF%E6%9C%AC.html"><span class="toc-text">项目背景介绍</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/index.html"><span class="toc-text">项目背景介绍</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【高级配置】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E9%AB%98%E7%BA%A7%E9%85%8D%E7%BD%AE/index.html"><span class="toc-text">项目背景介绍</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%B1%E5%B0%86%E8%AE%A1%E5%B0%B1%E8%AE%A1"><span class="toc-text">就将计就计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E6%B0%B4%E6%B0%B4%E6%B0%B4%E6%B0%B4s"><span class="toc-text">水水水水水s</span></a></li></ol></li></ol></div></div></div>
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker-%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-text">Docker 的组成</span></a></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B02.html"><span class="toc-text">安装基础</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/3.html"><span class="toc-text">项目背景介绍</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div></div>
 
 
 
@@ -97,19 +97,19 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/index.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-11T05:52:40.992Z">2022-11-11</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-18T08:30:28.281Z">2022-11-18</time></div></div>
 
   <article class='content md wiki'>
-  <h1 class="article-title"><span>项目背景介绍</span></h1>
-  <h2 id="就将计就计"><a href="#就将计就计" class="headerlink" title="就将计就计"></a>就将计就计</h2><p>123</p>
-<h3 id="水水水水水s"><a href="#水水水水水s" class="headerlink" title="水水水水水s"></a>水水水水水s</h3><p>456</p>
+  <h1 class="article-title"><span>docker简介</span></h1>
+  <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>   统称来说，容器是一种工具，指的是可以装下其它物品的工具，以方便人类归<br>纳放置物品、存储和异地运输，具体来说比如人类使用的衣柜、行李箱、背包等<br>可以成为容器，但今天我们所说的容器是一种 IT 技术。</p>
+<h3 id="Docker-的组成"><a href="#Docker-的组成" class="headerlink" title="Docker 的组成"></a>Docker 的组成</h3><p> Docker 主机(Host)： 一个物理机或虚拟机， 用于运行 Docker 服务进程和容器。<br> Docker 服务端(Server)： Docker 守护进程， 运行 docker 容器。<br> Docker 客户端(Client)： 客户端使用 docker 命令或其他工具调用 docker API。<br> Docker 仓库(Registry): 保存镜像的仓库， 类似于 git 或 svn 这样的版本控制系<br> Docker 镜像(Images)： 镜像可以理解为创建实例使用的模板。<br> Docker 容器(Container): 容器是从镜像生成对外提供服务的一个或一组服务。<a target="_blank" rel="noopener" href="https://hub.docker.com/">官方仓库</a></p>
 
   
 
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/index%20-%20%E5%89%AF%E6%9C%AC.html">项目背景介绍</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/zabbix/%E7%AE%80%E4%BB%8B02.html">安装基础</a></div></section></div>
 
   
 
