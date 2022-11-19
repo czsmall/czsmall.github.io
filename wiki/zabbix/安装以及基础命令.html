@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="初学者">
 <meta property="og:description" content="Linux安装官方文档 要求：linux 需要内核版本在 3.10 或以上    Docker 之前没有区分版本， 2017 年之后的版本之后开始区分为 CE 版本（社区版本） 和 EE（企业收费版） ， EE 版本提供后期安全维护 1年， 而 CE 版本是 4 个月 如何使用K8s，需要使用经过K8s认证的版本,在确定docker版本 清华源及安装文档  yum安装卸载旧版本及依赖 12345">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-19T09:02:47.378Z">
-<meta property="article:modified_time" content="2022-11-19T09:02:47.378Z">
+<meta property="article:published_time" content="2022-11-19T09:19:06.015Z">
+<meta property="article:modified_time" content="2022-11-19T09:19:06.015Z">
 <meta property="article:author" content="Harvey">
 <meta property="article:tag" content="初学者">
 <meta name="twitter:card" content="summary">
@@ -97,7 +97,7 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-19T09:02:47.378Z">2022-11-19</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-19T09:19:06.015Z">2022-11-19</time></div></div>
 
   <article class='content md wiki'>
   <h1 class="article-title"><span>安装以及基础</span></h1>
@@ -132,12 +132,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">&#x27;s+download.docker.com+mirrors.tuna.tsinghua.edu.cn/docker-ce+&#x27;</span> /etc/yum.repos.d/docker-ce.repo</span><br></pre></td></tr></table></figure>
 
 <p><strong>查看yum源支持的版本</strong></p>
-<!-- tab Centos -->
-
-<p>yum list docker-ce –showduplicates | sort -r<br>         ##软件名字                     #排序<br>yum makecache fast  ##更新缓存<br>yum update  #更新软件</p>
-<!-- tab ubxuntu -->
-<p>atp-cache madison docker-ce</p>
-<div class="tag-plugin note" ><div class="body"><div class="tag-plugin tabs"id="tab_5""><ul class="nav-tabs"><li class="tab active"><a href="#tab_5-1">Centos</a></li><li class="tab"><a href="#tab_5-2">Ubuntu</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><p>公司一般都会强制安装安防软件，这些软件要求开机自启动，要求有屏幕录制权限、完全的磁盘访问权限包括相册图库。因此如果使用自己的 MacBook 作为办公设备，必须要把生活区和工作区完全独立开，安装在两个磁盘分区，并且对磁盘分区进行加密。</p></div><div class="tab-pane" id="tab_5-2"><p>Hexo: 5.4.0<br>hexo-cli: 4.2.0<br>node.js: 14.15.4 LTS # 建议使用LTS版本<br>npm: 6.14.10 LTS</p></div></div></div></div></div>
+<div class="tag-plugin note" ><div class="body"><div class="tag-plugin tabs"id="tab_5""><ul class="nav-tabs"><li class="tab active"><a href="#tab_5-1">Centos</a></li><li class="tab"><a href="#tab_5-2">Ubuntu</a></li></ul><div class="tab-content"><div class="tab-pane active" id="tab_5-1"><figure class="highlight bash"><figcaption><span>查看</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum list docker-ce --showduplicates | <span class="built_in">sort</span> -r</span><br><span class="line">         <span class="comment">##软件名字                     #排序</span></span><br><span class="line">yum makecache fast  <span class="comment">##更新缓存  </span></span><br><span class="line">yum update  <span class="comment">#更新软件</span></span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="tab_5-2"><figure class="highlight bash"><figcaption><span>建议的版本</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">atp-cache madison docker-ce</span><br></pre></td></tr></table></figure></div></div></div></div></div>
 
 
 
