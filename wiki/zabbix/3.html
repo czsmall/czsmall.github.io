@@ -20,21 +20,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Zabbix专栏：项目背景介绍 - 初学者</title>
+  <title>Zabbix专栏：docker镜像管理 - 初学者</title>
 
   
-    <meta name="description" content="就将计就计123 水水水水水s456">
+    <meta name="description" content="基本命令   镜像下载：docker pull images名称 查看本地镜像：：docker images 查看镜像有多少层： docker history images ID    进入到容器中：docker run -it images名称 bash  #导出后查看manifest.json 文件 导出镜像到某目录：docker save  images &gt; &#x2F;root&amp;#">
 <meta property="og:type" content="website">
-<meta property="og:title" content="项目背景介绍">
+<meta property="og:title" content="docker镜像管理">
 <meta property="og:url" content="https://czsmall.github.io/wiki/zabbix/3.html">
 <meta property="og:site_name" content="初学者">
-<meta property="og:description" content="就将计就计123 水水水水水s456">
+<meta property="og:description" content="基本命令   镜像下载：docker pull images名称 查看本地镜像：：docker images 查看镜像有多少层： docker history images ID    进入到容器中：docker run -it images名称 bash  #导出后查看manifest.json 文件 导出镜像到某目录：docker save  images &gt; &#x2F;root&amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-18T08:47:54.472Z">
-<meta property="article:modified_time" content="2022-11-11T05:52:40.992Z">
+<meta property="og:image" content="https://czsmall.github.io/wiki%5Czabbix%5Cpicture/%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:image" content="https://czsmall.github.io/wiki%5Czabbix%5Cpicture/%E4%B8%8D%E5%90%8C%E5%B1%82.png">
+<meta property="article:published_time" content="2022-11-21T10:27:38.677Z">
+<meta property="article:modified_time" content="2022-11-21T10:27:38.677Z">
 <meta property="article:author" content="Harvey">
 <meta property="article:tag" content="初学者">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://czsmall.github.io/wiki%5Czabbix%5Cpicture/%E6%A0%BC%E5%BC%8F.png">
   
   
 
@@ -79,7 +82,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html"><span class="toc-text">安装以及基础</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/3.html"><span class="toc-text">项目背景介绍</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%B1%E5%B0%86%E8%AE%A1%E5%B0%B1%E8%AE%A1"><span class="toc-text">就将计就计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B0%B4%E6%B0%B4%E6%B0%B4%E6%B0%B4%E6%B0%B4s"><span class="toc-text">水水水水水s</span></a></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div></div>
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html"><span class="toc-text">安装以及基础</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/3.html"><span class="toc-text">docker镜像管理</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86"><span class="toc-text">管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2"><span class="toc-text">搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-text">下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E9%95%9C%E5%83%8F"><span class="toc-text">本地镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA"><span class="toc-text">导入导出</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-text">操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%B8%80%E4%B8%AA%E5%AE%B9%E5%99%A8"><span class="toc-text">启动一个容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%AE%B9%E5%99%A8"><span class="toc-text">查看所有容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E6%AD%A4%E8%BF%90%E8%A1%8C"><span class="toc-text">单此运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84%E5%A4%9A%E4%B8%AA%E7%AB%AF%E5%8F%A3"><span class="toc-text">映射多个端口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%9F%90%E4%B8%80%E4%B8%AA%E5%9C%B0%E5%9D%80"><span class="toc-text">映射服务器的某一个地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8"><span class="toc-text">进入容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E9%95%9C%E5%83%8F"><span class="toc-text">调试镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-text">删除</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#docker-info%E4%BF%A1%E6%81%AF"><span class="toc-text">docker info信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97"><span class="toc-text">容器日志</span></a></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/01.html"><span class="toc-text">项目背景介绍</span></a></div></div></div>
 
 
 
@@ -97,19 +100,82 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-11T05:52:40.992Z">2022-11-11</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-21T10:27:38.677Z">2022-11-21</time></div></div>
 
   <article class='content md wiki'>
-  <h1 class="article-title"><span>项目背景介绍</span></h1>
-  <h2 id="就将计就计"><a href="#就将计就计" class="headerlink" title="就将计就计"></a>就将计就计</h2><p>123</p>
-<h3 id="水水水水水s"><a href="#水水水水水s" class="headerlink" title="水水水水水s"></a>水水水水水s</h3><p>456</p>
+  <h1 class="article-title"><span>docker镜像管理</span></h1>
+  <blockquote>
+<p>基本命令</p>
+</blockquote>
+<ul>
+<li>镜像下载：docker pull <del>images名称</del></li>
+<li>查看本地镜像：：docker images</li>
+<li>查看镜像有多少层： docker history <del>images ID</del>   </li>
+<li>进入到容器中：docker run -it <del>images</del>名称 bash  #导出后查看manifest.json 文件</li>
+<li>导出镜像到某目录：docker save  <del>images</del> &gt; &#x2F;root&#x2F; <del>images</del>tar.gz</li>
+<li>停止一个正在运行的容器：  #docker stop 容器ID</li>
+<li>查看地址转换：iptables -t nat -vnl。容器端口</li>
+</ul>
+<h2 id="管理"><a href="#管理" class="headerlink" title="管理"></a>管理</h2><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a><strong>搜索</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search  images名称</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>#<a target="_blank" rel="noopener" href="https://hub.docker.com/search?q=tomcat">推荐官方搜索</a>,.标有tag为官方镜像。search出来带ok的为官方。	  </p>
+</li>
+<li><p>点击tag，选择不同版本，复制下载命令。</p>
+</li>
+</ul>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull  images名称</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>images名称格式 <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/wiki%5Czabbix%5Cpicture/%E6%A0%BC%E5%BC%8F.png"> </p>
+</li>
+<li><p>下载后存在在&#x2F;etc&#x2F;docker&#x2F;daemon.json文件定义的目录images下 #默认在&#x2F;var&#x2F;docker&#x2F;目录下<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/wiki%5Czabbix%5Cpicture/%E4%B8%8D%E5%90%8C%E5%B1%82.png"></p>
+</li>
+</ul>
+<h3 id="本地镜像"><a href="#本地镜像" class="headerlink" title="本地镜像"></a>本地镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$docker</span> images</span><br><span class="line">REPOSITORY   TAG       IMAGE ID       CREATED         SIZE</span><br><span class="line">mysql        latest    3218b38490ce   11 months ago   516MB</span><br><span class="line"><span class="comment">#名称         #版本      #哈希值           #创建时间       #容量</span></span><br></pre></td></tr></table></figure>
+
+<p>​	</p>
+<h3 id="导入导出"><a href="#导入导出" class="headerlink" title="导入导出"></a>导入导出</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#导出</span><br><span class="line">docker save  ~~images名称;版本~~ &gt; /root/ ~~images名称~~tar.gz  </span><br><span class="line">docker save -o /mysql-image.tar.gz mysql:latest</span><br><span class="line">                #目录/名称            #本地的那个images</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">导入</span><br><span class="line">docker load -i /目录/image名称  <span class="comment">#识别镜像并解压</span></span><br><span class="line">docker load &lt; /目录/image名称</span><br></pre></td></tr></table></figure>
+
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="启动一个容器"><a href="#启动一个容器" class="headerlink" title="启动一个容器"></a>启动一个容器</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d    -p 3300:3306 mysql </span><br><span class="line">       #-d后台运行     #宿主机端口：容器端口</span><br><span class="line">       #-P，不需要指定端口，自动分配</span><br><span class="line">       #-name 指定容器名称</span><br><span class="line">       #docker run运行容器</span><br><span class="line">       #镜像名必须在在最后面</span><br><span class="line">       # -it标准输入 终端</span><br><span class="line">       #exit退出且保留：Ctrl+q+p。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查看地址转换：iptables -t nat -vnl</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看所有容器"><a href="#查看所有容器" class="headerlink" title="查看所有容器"></a>查看所有容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a <span class="comment">#用于清楚没用的容器</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="单此运行"><a href="#单此运行" class="headerlink" title="单此运行"></a><strong>单此运行</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --<span class="built_in">rm</span>  nginx <span class="comment">#推出后会清楚此容器</span></span><br><span class="line">               --<span class="built_in">rm</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="映射多个端口"><a href="#映射多个端口" class="headerlink" title="映射多个端口"></a><strong>映射多个端口</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d -p 3300:80/tcp -p 3301:81/udp  nginx:1.18.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="映射服务器的某一个地址"><a href="#映射服务器的某一个地址" class="headerlink" title="映射服务器的某一个地址"></a><strong>映射服务器的某一个地址</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -d -p 192.168.0.80：3300:80/tcp -p 3301:81/udp  nginx:1.18.2</span><br><span class="line">                                  <span class="comment">#不指定则表示所有*</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it imagesID bash</span><br></pre></td></tr></table></figure>
+
+<p>#docker run ：根据镜像创建一个容器并运行一个命令，操作的对象是 镜像；</p>
+<p> docker exec ：在运行的容器中执行命令，操作的对象是 容器。</p>
+<h3 id="调试镜像"><a href="#调试镜像" class="headerlink" title="调试镜像"></a>调试镜像</h3>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run  -it  mysql  bash  <span class="comment">#创建容器</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">彻底删除指定容器： docker <span class="built_in">rm</span> -fv   容器ID</span><br><span class="line">删除指定镜像： docker rmi 名称:fag/ ID</span><br></pre></td></tr></table></figure>
+
+<h2 id="docker-info信息"><a href="#docker-info信息" class="headerlink" title="docker info信息"></a>docker info信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">[root@k-node2 ~]<span class="comment"># docker info</span></span><br><span class="line">Containers: 2 <span class="comment">#当前主机运行的容器总数</span></span><br><span class="line">Running: 1 <span class="comment">#有几个容器是正在运行的</span></span><br><span class="line">Paused: 0 <span class="comment">#有几个容器是暂停的</span></span><br><span class="line">Stopped: 1 <span class="comment">#有几个容器是停止的</span></span><br><span class="line">Images: 3 <span class="comment">#当前服务器的镜像数</span></span><br><span class="line">Server Version: 18.09.9 <span class="comment">#服务端版本</span></span><br><span class="line">Storage Driver: overlay2 <span class="comment">#正在使用的存储引擎</span></span><br><span class="line">Backing Filesystem: xfs <span class="comment">#后端文件系统，即服务器的磁盘文件系统</span></span><br><span class="line">Supports d_type: <span class="literal">true</span> <span class="comment">#是否支持 d_type</span></span><br><span class="line">Native Overlay Diff: <span class="literal">true</span> <span class="comment">#是否支持差异数据存储</span></span><br><span class="line">Logging Driver: json-file <span class="comment">#日志类型</span></span><br><span class="line">Cgroup Driver: cgroupfs <span class="comment">#Cgroups 类型</span></span><br><span class="line">Plugins: <span class="comment">#插件</span></span><br><span class="line">Volume: <span class="built_in">local</span> <span class="comment">#卷</span></span><br><span class="line">Network: bridge host macvlan null overlay <span class="comment"># overlay 夸主机通信</span></span><br><span class="line">Log: awslogs fluentd gcplogs gelf journald json-file <span class="built_in">local</span> logentries splunk</span><br><span class="line">syslog <span class="comment">#日志类型</span></span><br><span class="line">Swarm: inactive <span class="comment">#是否支持 swarm</span></span><br><span class="line">Runtimes: runc <span class="comment">#已安装的容器运行时</span></span><br><span class="line">Default Runtime: runc <span class="comment">#默认使用的容器运行时</span></span><br><span class="line">Init Binary: docker-init <span class="comment">#初始化容器的守护进程，即 pid 为 1 的进程</span></span><br><span class="line">containerd version: 894b81a4b802e4eb2a91d1ce216b8817763c29fb <span class="comment">#版本</span></span><br><span class="line">runc version: 425e105d5a03fabd737a126ad93d62a9eeede87f <span class="comment"># runc 版本</span></span><br><span class="line">init version: fec3683 <span class="comment">#init 版本</span></span><br><span class="line">Security Options: <span class="comment">#安全选项</span></span><br><span class="line">Apparmor <span class="comment">#安全模块， https://docs.docker.com/engine/security/apparmor/</span></span><br><span class="line">seccomp <span class="comment">#审计(操作)，https://docs.docker.com/engine/security/seccomp/</span></span><br><span class="line">Profile: default <span class="comment">#默认的配置文件</span></span><br><span class="line">Kernel Version: 4.15.0-55-generic <span class="comment">#宿主机内核版本</span></span><br><span class="line">Operating System: Ubuntu 18.04.3 LTS <span class="comment">#宿主机操作系统</span></span><br><span class="line">OSType: linux <span class="comment">#宿主机操作系统类型</span></span><br><span class="line">Architecture: x86_64 <span class="comment">#宿主机架构</span></span><br><span class="line">CPUs: 1 <span class="comment">#宿主机 CPU 数量</span></span><br><span class="line">Total Memory: 1.924GiB <span class="comment">#宿主机总内存</span></span><br><span class="line">Name: docker-server1.magedu.net <span class="comment">#宿主机 hostname</span></span><br><span class="line">ID:</span><br><span class="line">ZFPD:UIA5:SR6E:Y6SS:52QL:5MPT:VDY3:ATVI:QMVG:HAFF:MN74:2HPD <span class="comment">#</span></span><br><span class="line">宿主机 ID</span><br><span class="line">Docker Root Dir: /var/lib/docker <span class="comment">#宿主机数据保存目录</span></span><br><span class="line">Debug Mode (client): <span class="literal">false</span> <span class="comment">#client 端是否开启 debug</span></span><br><span class="line">Debug Mode (server): <span class="literal">false</span> <span class="comment">#server 端是否开启 debug</span></span><br><span class="line">Registry: https://index.docker.io/v1/ <span class="comment">#镜像仓库</span></span><br><span class="line">Labels: <span class="comment">#其他标签</span></span><br><span class="line">Experimental: <span class="literal">false</span> <span class="comment">#是否测试版</span></span><br><span class="line">Insecure Registries: <span class="comment">#非安全的镜像仓库</span></span><br><span class="line">127.0.0.0/8</span><br><span class="line">Live Restore Enabled: <span class="literal">false</span> <span class="comment">#是否开启活动重启(重启 docker-daemon 不关闭容</span></span><br><span class="line">器)</span><br><span class="line">Product License: Community Engine <span class="comment">#产品许可信息</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="容器日志"><a href="#容器日志" class="headerlink" title="容器日志"></a>容器日志</h2><p>查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker logs --<span class="built_in">tail</span> 100 容器iD</span><br><span class="line">           <span class="comment"># --tail 100: 查看前100行</span></span><br></pre></td></tr></table></figure>
+
 
   
 
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E5%AE%89%E8%A3%85%E4%BB%A5%E5%8F%8A%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4.html">安装以及基础</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/zabbix/01.html">项目背景介绍</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html">安装以及基础</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/zabbix/01.html">项目背景介绍</a></div></section></div>
 
   
 
