@@ -20,17 +20,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>初学者</title>
+  <title>Zabbix专栏：镜像仓库 - 初学者</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="【linux,zabbix】">
-<meta property="og:url" content="https://czsmall.github.io/wiki/tags/%E3%80%90linux,zabbix%E3%80%91/index.html">
+    <meta name="description" content="官方仓库 官方仓库：阿里镜像仓库，Docker官方仓库。因Docker官方仓库在国外，访问不稳定。不做重点使用。 私有仓库：  阿里镜像仓库1，登录阿里容器镜像服务,找到实列列表——个人实例&#x2F;企业版——镜像仓库 2，创建仓库。命令空间可以理解为一个tag。仓库名称可以理解为什么同一个项目的名称。  3，回到作者的电脑，登录自己的镜像仓库：docker login 回车密码后，提示Logi">
+<meta property="og:type" content="website">
+<meta property="og:title" content="镜像仓库">
+<meta property="og:url" content="https://czsmall.github.io/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html">
 <meta property="og:site_name" content="初学者">
+<meta property="og:description" content="官方仓库 官方仓库：阿里镜像仓库，Docker官方仓库。因Docker官方仓库在国外，访问不稳定。不做重点使用。 私有仓库：  阿里镜像仓库1，登录阿里容器镜像服务,找到实列列表——个人实例&#x2F;企业版——镜像仓库 2，创建仓库。命令空间可以理解为一个tag。仓库名称可以理解为什么同一个项目的名称。  3，回到作者的电脑，登录自己的镜像仓库：docker login 回车密码后，提示Logi">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png">
+<meta property="article:published_time" content="2022-11-25T00:51:41.340Z">
+<meta property="article:modified_time" content="2022-11-25T00:51:41.340Z">
 <meta property="article:author" content="Harvey">
 <meta property="article:tag" content="初学者">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png">
   
   
 
@@ -59,55 +65,75 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='index'>
+    <aside class='l_left' layout='wiki'>
     
 
   
 
 <header class="header">
 
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/tou.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">初学者</div><div class="sub normal cap">--🤞 白熊👀 —</div><div class="sub hover cap" style="opacity:0">czsmall@foxmail.com</div></a></div>
-
-
-<nav class="menu dis-select"><a class="nav-item" href="/">文章</a><a class="nav-item active" href="/wiki/">专栏</a><a class="nav-item" href="/notes/">便签</a><a class="nav-item" href="/about/">关于</a></nav>
+<div class="logo-wrap wiki"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><div class="main" ff="title">Zabbix专栏</div><div class="sub cap">专栏2测试用的副标题</div></a></div>
 </header>
 
 
 <div class="widgets">
-<div class="widget-wrap" id="markdown"><div class="widget-header cap theme dis-select"><span class="name">网站正在完善中~~~~！！</span></div><div class="widget-body fs14"><p>欢迎使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/">Stellar</a> 主题，下面是您的入门指南，祝您使用愉快！<br><br><br> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://www.dmoe.cc/random.php"></p>
-</div></div>
 
-<div class="widget-wrap" id="recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html"><span class="title">Zabbix专栏 / 镜像仓库</span></a><a class="item title" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="title">Zabbix专栏 / docker简介</span></a><a class="item title" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.html"><span class="title">Zabbix专栏 / 镜像制作</span></a><a class="item title" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="title">Zabbix专栏 / docker镜像管理</span></a><a class="item title" href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html"><span class="title">Zabbix专栏 / 安装以及基础</span></a></div></div>
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html"><span class="toc-text">安装以及基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">docker镜像管理</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.html"><span class="toc-text">镜像制作</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html"><span class="toc-text">镜像仓库</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E4%BB%93%E5%BA%93"><span class="toc-text">官方仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">阿里镜像仓库</span></a></li></ol></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html"><span class="toc-text">镜像仓库</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E4%BB%93%E5%BA%93"><span class="toc-text">官方仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">阿里镜像仓库</span></a></li></ol></li></ol></div></div></div>
+
+
+
+
 
 
 </div>
-<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/08a41b181ce68.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3845874.svg"/></a><a class="social" href="/" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/3616429.svg"/></a><a class="social" href="/about/#comments" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.3/social/942ebbf1a4b91.svg"/></a></div></footer>
+
 
     </aside>
-    <div class='l_main list'>
+    <div class='l_main'>
       
-  
-
-<header class="header mobile-only">
-
-<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/tou.png" onerror="javascript:this.classList.add('error');this.src='https://fastly.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">初学者</div><div class="sub normal cap">--🤞 白熊👀 —</div><div class="sub hover cap" style="opacity:0">czsmall@foxmail.com</div></a></div>
-</header>
-
-
 
       
 
   
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-25T00:51:41.340Z">2022-11-25</time></div></div>
+
+  <article class='content md wiki'>
+  <h1 class="article-title"><span>镜像仓库</span></h1>
+  <h2 id="官方仓库"><a href="#官方仓库" class="headerlink" title="官方仓库"></a>官方仓库</h2><blockquote>
+<p>官方仓库：阿里镜像仓库，Docker官方仓库。因Docker官方仓库在国外，访问不稳定。不做重点使用。</p>
+<p>私有仓库：</p>
+</blockquote>
+<h3 id="阿里镜像仓库"><a href="#阿里镜像仓库" class="headerlink" title="阿里镜像仓库"></a>阿里镜像仓库</h3><p>1，<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/">登录</a>阿里容器镜像服务,找到实列列表——个人实例&#x2F;企业版——镜像仓库</p>
+<p>2，创建仓库。命令空间可以理解为一个tag。仓库名称可以理解为什么同一个项目的名称。</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/%5Cwiki%5Czabbix%5Cpicture/%E5%88%9B%E5%BB%BA%E4%BB%93%E5%BA%93.png"></p>
+<p>3，回到作者的电脑，登录自己的镜像仓库：docker login 回车密码后，<u>提示Login Succeeded</u>才算成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker login --username=自己的账号@163.com registry.cn-shanghai.aliyuncs.com</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
   
 
-<div class="nav-wrap"><nav class="sub wiki cap"><a href="/wiki">所有专栏</a></a><a href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/index.html">知识库</a></a><a href="/wiki/tags/%E3%80%90linux,nginx%E3%80%91/index.html">【linux,nginx】</a></a><a class="active" href="/wiki/tags/%E3%80%90linux,zabbix%E3%80%91/index.html">【linux,zabbix】</a></a></nav></div>
 
-  <div class="post-list wiki filter"><a class="post-card wiki " href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">
-<article class="md"><div class="preview"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/tou.png" alt="logo" height="120px"/></div><div class="excerpt"><div class="cap breadcrumb">【linux,zabbix】</div><h2 class="post-title">zabbix</h2><p>描述</p></div></article>
-</a></div>
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.html">镜像制作</a></div><div class="item" id="next"></div></section></div>
+
+  
+
+  <div class='related-wrap md reveal' id="comments">
+    <div class='cmt-title cap theme'>
+      快来参与讨论吧
+    </div>
+    <div class='cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </div>
+  </div>
 
 
 
