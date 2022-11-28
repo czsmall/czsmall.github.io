@@ -30,15 +30,16 @@
 <meta property="og:site_name" content="初学者">
 <meta property="og:description" content="手动提交 手动下载一个centos容器，进去做好配置后dicker  commit提交镜像。——不常用  12docker commit -a &quot;111111@qq.com&quot; -m&quot;nginx yum v1&quot; --change&#x3D;&quot;EXPOSE 80 443&quot; f5f8c13d0f9f    centos-nginx:v1">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czsmall.github.io/">
 <meta property="og:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture/dockerfile%E7%9B%AE%E5%BD%95.png">
 <meta property="og:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture/NginxDocker.png">
 <meta property="og:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture%5C%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82.png">
-<meta property="article:published_time" content="2022-11-26T07:00:23.038Z">
-<meta property="article:modified_time" content="2022-11-26T07:00:23.038Z">
+<meta property="article:published_time" content="2022-11-28T00:11:22.045Z">
+<meta property="article:modified_time" content="2022-11-28T00:11:22.045Z">
 <meta property="article:author" content="Harvey">
 <meta property="article:tag" content="初学者">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://czsmall.github.io/%5Cwiki%5Czabbix%5Cpicture/dockerfile%E7%9B%AE%E5%BD%95.png">
+<meta name="twitter:image" content="https://czsmall.github.io/">
   
   
 
@@ -83,7 +84,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html"><span class="toc-text">安装以及基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">docker镜像管理</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.html"><span class="toc-text">镜像制作</span></a><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="toc-text">手动提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dockerfile"><span class="toc-text">Dockerfile</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%88%B6%E9%95%9C%E5%83%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">下载父镜像初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E5%86%99dockerfile"><span class="toc-text">编写dockerfile</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82%E6%9E%84%E5%BB%BA"><span class="toc-text">企业镜像分层构建</span></a></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html"><span class="toc-text">镜像仓库</span></a></div></div></div>
+<div class="widget-wrap multi" id="toc"><div class="widget-header cap dis-select"><span class="name">【Docker简介】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html"><span class="toc-text">docker简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E5%AE%89%E8%A3%8502.html"><span class="toc-text">安装以及基础</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">docker镜像管理</span></a></div></div><div class="widget-header cap dis-select"><span class="name">【Docker镜像与制作】</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E5%88%B6%E4%BD%9C.html"><span class="toc-text">镜像制作</span></a><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E6%8F%90%E4%BA%A4"><span class="toc-text">手动提交</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dockerfile"><span class="toc-text">Dockerfile</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E7%88%B6%E9%95%9C%E5%83%8F%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">下载父镜像初始化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%96%E5%86%99dockerfile"><span class="toc-text">编写dockerfile</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E9%95%9C%E5%83%8F%E5%88%86%E5%B1%82%E6%9E%84%E5%BB%BA"><span class="toc-text">企业镜像分层构建</span></a></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">【Docker数据管理】</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/zabbix/images.html"><span class="toc-text">镜像仓库</span></a></div></div></div>
 
 
 
@@ -101,7 +102,7 @@
 
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-26T07:00:23.038Z">2022-11-26</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/zabbix/%E7%AE%80%E4%BB%8B01.html">Zabbix专栏</a></div><div id="post-meta">更新于&nbsp;<time datetime="2022-11-28T00:11:22.045Z">2022-11-28</time></div></div>
 
   <article class='content md wiki'>
   <h1 class="article-title"><span>镜像制作</span></h1>
@@ -110,10 +111,10 @@
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker commit -a <span class="string">&quot;111111@qq.com&quot;</span> -m<span class="string">&quot;nginx yum v1&quot;</span> --change=<span class="string">&quot;EXPOSE 80 443&quot;</span> f5f8c13d0f9f    centos-nginx:v1</span><br><span class="line">           <span class="comment">#-a指定所有者信息    -m描述信息           #声明暴露的端口         #要提交的镜像ID    #提交后的项目名称：tag</span></span><br></pre></td></tr></table></figure>
 
-<p>![](\wiki\zabbix\picture&#x2F;docker 提交.png)</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/" alt="\wiki\zabbix\picture/docker 提交.png"></p>
 <h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><blockquote>
-<p>官方仓库可查看镜像dockerfile[Nginx官方dockerfile内容](<a target="_blank" rel="noopener" href="https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/alpine-perl/Dockerfile">docker-nginx&#x2F;Dockerfile at fef51235521d1cdf8b05d8cb1378a526d2abf421 · nginxinc&#x2F;docker-nginx (github.com)</a>)。</p>
-<p>镜像名称格式要求：{ % u 仓库域名地址&#x2F;项目项目名称&#x2F;镜像名称：版本号 %}</p>
+<p>官方仓库可查看镜像dockerfile<a target="_blank" rel="noopener" href="https://github.com/nginxinc/docker-nginx/blob/fef51235521d1cdf8b05d8cb1378a526d2abf421/mainline/alpine-perl/Dockerfile">Nginx官方dockerfile内容</a>)</p>
+<p>镜像名称格式要求：<u>仓库域名地址/项目项目名称/镜像名称：版本号</u></p>
 </blockquote>
 <p>Dockerfile参数</p>
 <ul>
@@ -152,7 +153,7 @@
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html">docker镜像管理</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93.html">镜像仓库</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/zabbix/%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html">docker镜像管理</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/zabbix/images.html">镜像仓库</a></div></section></div>
 
   
 
