@@ -20,13 +20,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>docker：这是分页标题 - 小白记</title>
+  <title>docker：Docker安装与简介 - 小白记</title>
 
   
     <meta name="description" content="Docker容器虚拟化学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  第一章 Docker简介1.1 什么是虚拟化虚拟化，是指通过虚">
 <meta property="og:type" content="website">
-<meta property="og:title" content="这是分页标题">
-<meta property="og:url" content="http://oshcz.cn/wiki/docker/index.html">
+<meta property="og:title" content="Docker安装与简介">
+<meta property="og:url" content="http://oshcz.cn/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html">
 <meta property="og:site_name" content="小白记">
 <meta property="og:description" content="Docker容器虚拟化学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  第一章 Docker简介1.1 什么是虚拟化虚拟化，是指通过虚">
 <meta property="og:locale" content="zh_CN">
@@ -42,24 +42,8 @@
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/6c1fa7fbf87d7759afd7ff220d7851f2.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/8c3fb774801e2db9cbf6667d2d80f452.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/1c2e34ed116a46b39a30e6ad5ed00434.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/8dfba12eb5b8a545e4c63f5ffbddc582.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/wiki/docker/(media/ddd6eb4c16fa7193203dd42739eed11c.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/d143d7c850370ed96cc990140e08db26.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/389c8d9277cc4dc7dd50b849bc2cd3b3.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/06c80bf0b706b6e999a9654c4e5818e5.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/21fe65e0ed09cadb6b03360e2de4d0a6.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/8673ef01f4e71756c584b83240e7c81f.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/3bcfcd97029a7c7360062aa80b564240.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/637443e4246352040d29de7b2260aba3.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/0adf6e45e433391ba782d17faf860905.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/b1724dd4b8f9f38c064bc815a4e3a0fe.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/18cda7fca174d51bc37a27d1d5711041.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/7319ee760826c3c561bb41e94ac31585.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/03816b61461eac44c2c85bbe5483ed43.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/09b37febc454d8546054fcaa3fd7dc1c.png">
-<meta property="og:image" content="http://oshcz.cn/wiki/docker/media/4d0019b6b9370ea0516d14609cd70011.png">
-<meta property="article:published_time" content="2023-10-24T11:13:17.099Z">
-<meta property="article:modified_time" content="2023-10-24T11:13:17.099Z">
+<meta property="article:published_time" content="2023-10-25T02:37:02.747Z">
+<meta property="article:modified_time" content="2023-10-25T02:37:02.747Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://oshcz.cn/wiki/docker/media/c602a947c50cea237554d700dbcbadf5.png">
@@ -104,13 +88,11 @@
 
 
 
-<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html"><div class="main" ff="title">docker</div><div class="sub normal cap">每个人的独博客</div><div class="sub hover cap" style="opacity:0"> Designed by xaoxuu</div></a></div></widget>
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html"><div class="main" ff="title">docker</div><div class="sub normal cap">每个人的独博客</div><div class="sub hover cap" style="opacity:0"> Designed by xaoxuu</div></a></div></widget>
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/docker/" placeholder="在 /wiki/docker/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/index.html"><span class="toc-text">这是分页标题</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8%E8%99%9A%E6%8B%9F%E5%8C%96"><span class="toc-text">Docker容器虚拟化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87%EF%BC%9A"><span class="toc-text">学习目标：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-Docker%E7%AE%80%E4%BB%8B"><span class="toc-text">第一章 Docker简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%8C%96"><span class="toc-text">1.1 什么是虚拟化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%BB%80%E4%B9%88%E6%98%AFDocker"><span class="toc-text">1.2 什么是Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%AF%94%E8%BE%83"><span class="toc-text">1.3 容器与虚拟机比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Docker-%E7%BB%84%E4%BB%B6"><span class="toc-text">1.4 Docker 组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Docker%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1.4.1 Docker组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Docker%E9%95%9C%E5%83%8F%E4%B8%8E%E5%AE%B9%E5%99%A8"><span class="toc-text">1.4.2 Docker镜像与容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Registry%EF%BC%88%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%EF%BC%89"><span class="toc-text">1.4.3 Registry（注册中心）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="toc-text">第二章 Docker安装与启动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85Docker-CentOS7"><span class="toc-text">2.1 安装Docker-CentOS7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Docker%E7%9A%84%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2"><span class="toc-text">2.2 Docker的启动与停止</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.1 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%EF%BC%9Adocker-%E2%80%93help"><span class="toc-text">2.2.2 帮助手册：docker –help</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-%E6%8C%87%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text">2.2.3 指令介绍</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">第三章 常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E9%95%9C%E5%83%8F%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">3.1 镜像相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-1-%E6%9F%A5%E7%9C%8B%E9%95%9C%E5%83%8F"><span class="toc-text">3.1.1 查看镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-2-%E6%90%9C%E7%B4%A2%E9%95%9C%E5%83%8F"><span class="toc-text">3.1.2 搜索镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-3-%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-text">3.1.3 拉取镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-4-%E5%88%A0%E9%99%A4%E9%95%9C%E5%83%8F"><span class="toc-text">3.1.4 删除镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-15-%E4%BB%8EDocker-Hub%E6%8B%89%E5%8F%96"><span class="toc-text">3.15 从Docker Hub拉取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">3.2 容器相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.1 查看容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.2 创建与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E5%81%9C%E6%AD%A2%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.3 停止与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D"><span class="toc-text">3.2.4 文件拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-%E7%9B%AE%E5%BD%95%E6%8C%82%E8%BD%BD"><span class="toc-text">3.2.5 目录挂载</span></a></li></ol></li></ol></li></ol></div></div></widget>
-
-<widget class="widget-wrapper related"><div class="widget-header cap theme dis-select"><span class="name">更多SRE笔记</span></div><div class="widget-body related-posts"><a class="item wiki" href="/wiki/linux/index.html"><span class="title">Linux</span><span class="excerpt">Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。</span></a><a class="item wiki" href="/wiki/kubernetes/index.html"><span class="title">Kubernetes</span><span class="excerpt">Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。</span></a></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker安装与简介</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8%E8%99%9A%E6%8B%9F%E5%8C%96"><span class="toc-text">Docker容器虚拟化</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87%EF%BC%9A"><span class="toc-text">学习目标：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-Docker%E7%AE%80%E4%BB%8B"><span class="toc-text">第一章 Docker简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%99%9A%E6%8B%9F%E5%8C%96"><span class="toc-text">1.1 什么是虚拟化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E4%BB%80%E4%B9%88%E6%98%AFDocker"><span class="toc-text">1.2 什么是Docker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%AE%B9%E5%99%A8%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%AF%94%E8%BE%83"><span class="toc-text">1.3 容器与虚拟机比较</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Docker-%E7%BB%84%E4%BB%B6"><span class="toc-text">1.4 Docker 组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Docker%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1.4.1 Docker组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Docker%E9%95%9C%E5%83%8F%E4%B8%8E%E5%AE%B9%E5%99%A8"><span class="toc-text">1.4.2 Docker镜像与容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Registry%EF%BC%88%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83%EF%BC%89"><span class="toc-text">1.4.3 Registry（注册中心）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0-Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E5%90%AF%E5%8A%A8"><span class="toc-text">第二章 Docker安装与启动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85Docker-CentOS7"><span class="toc-text">2.1 安装Docker-CentOS7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Docker%E7%9A%84%E5%90%AF%E5%8A%A8%E4%B8%8E%E5%81%9C%E6%AD%A2"><span class="toc-text">2.2 Docker的启动与停止</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-%E5%91%BD%E4%BB%A4"><span class="toc-text">2.2.1 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C%EF%BC%9Adocker-%E2%80%93help"><span class="toc-text">2.2.2 帮助手册：docker –help</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-%E6%8C%87%E4%BB%A4%E4%BB%8B%E7%BB%8D"><span class="toc-text">2.2.3 指令介绍</span></a></li></ol></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/06.Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker Compose容器编排</span></a></div></div></widget>
 </div>
 
 
@@ -123,10 +105,10 @@
   
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-24T11:13:17.099Z">2023-10-24</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T02:37:02.747Z">2023-10-25</time></div></div>
 
   <article class='md-text content wiki'>
-  <h1 class="article-title"><span>这是分页标题</span></h1>
+  <h1 class="article-title"><span>Docker安装与简介</span></h1>
   <h1 id="Docker容器虚拟化"><a href="#Docker容器虚拟化" class="headerlink" title="Docker容器虚拟化"></a>Docker容器虚拟化</h1><h2 id="学习目标："><a href="#学习目标：" class="headerlink" title="学习目标："></a>学习目标：</h2><ul>
 <li>掌握Docker基础知识，能够理解Docker镜像与容器的概念</li>
 <li>完成Docker安装与启动</li>
@@ -237,6 +219,10 @@
 </tr>
 </thead>
 </table>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">yum</span> <span class="string">install</span> <span class="string">-y</span> <span class="string">yum-utils</span> <span class="string">device-mapper-persistent-data</span> <span class="string">lvm2</span></span><br></pre></td></tr></table></figure>
+
+
+
 <ol>
 <li>设置镜像仓库<ul>
 <li><strong>大坑(千万不要试，网速慢，超时，安装不上)</strong></li>
@@ -460,198 +446,6 @@
 <td>停止一个或多个正在运行的容器</td>
 </tr>
 </tbody></table>
-<h1 id="第三章-常用命令"><a href="#第三章-常用命令" class="headerlink" title="第三章 常用命令"></a>第三章 常用命令</h1><p>镜像：Docker镜像是由文件系统叠加而成（是一种文件的存储形式）；是docker中的核心概念，可以认为镜像就是对某些运行环境或者软件打的包，用户可以从docker仓库中下载基础镜像到本地，比如，开发人员可以从docker仓库拉取（下载）一个只包含centos7系统的基础镜像，然后在这个镜像中安装jdk、mysql、Tomcat和自己开发的应用，最后将这些环境打成一个新的镜像。开发人员将这个新的镜像提交给测试人员进行测试，测试人员只需要在测试环境下运行这个镜像就可以了，这样就可以保证开发人员的环境和测试人员的环境完全一致。</p>
-<h2 id="3-1-镜像相关命令"><a href="#3-1-镜像相关命令" class="headerlink" title="3.1 镜像相关命令"></a>3.1 镜像相关命令</h2><h3 id="3-1-1-查看镜像"><a href="#3-1-1-查看镜像" class="headerlink" title="3.1.1 查看镜像"></a>3.1.1 查看镜像</h3><p>查看镜像可以使用如下命令：docker images</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/8dfba12eb5b8a545e4c63f5ffbddc582.png" fancybox="true"/></div></div>
-
-<ul>
-<li><p>REPOSITORY：镜像名称</p>
-</li>
-<li><p>TAG：镜像标签（版本）</p>
-</li>
-<li><p>IMAGE ID：镜像ID</p>
-</li>
-<li><p>CREATED：镜像的创建日期（不是获取该镜像的日期）</p>
-</li>
-<li><p>SIZE：镜像大小</p>
-<p>这些镜像都是存储在Docker的 &#x2F;var&#x2F;lib&#x2F;docker 目录下</p>
-</li>
-</ul>
-<h3 id="3-1-2-搜索镜像"><a href="#3-1-2-搜索镜像" class="headerlink" title="3.1.2 搜索镜像"></a>3.1.2 搜索镜像</h3><p>从网络中查找需要的镜像：docker search 镜像名称</p>
-<p>例如 下载一个 nginx 镜像</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="wiki/docker/(media/ddd6eb4c16fa7193203dd42739eed11c.png" fancybox="true"/></div></div>
-
-<ul>
-<li>NAME：仓库名称</li>
-<li>DESCRIPTION：镜像描述</li>
-<li>STARS：用户评价，反应一个镜像的受欢迎程度</li>
-<li>OFFICIAL：是否官方</li>
-<li>AUTOMATED：自动构建，表示该镜像由Docker Hub自动构建流程创建</li>
-</ul>
-<h3 id="3-1-3-拉取镜像"><a href="#3-1-3-拉取镜像" class="headerlink" title="3.1.3 拉取镜像"></a>3.1.3 拉取镜像</h3><p>拉取镜像就是从Docker仓库下载镜像到本地，镜像名称格式为 【名称:版本号】，如果版本号不指定则是最新的版本</p>
-<p>命令：docker pull 镜像名称<br>下载一个 nginx 的镜像 , 需要注意：如果下载的时候，不指定版本，会下载最新版本</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/d143d7c850370ed96cc990140e08db26.png" fancybox="true"/></div></div>
-
-<p>刚刚下载的镜像通过 docker images 就可以查看</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/389c8d9277cc4dc7dd50b849bc2cd3b3.png" fancybox="true"/></div></div>
-
-<h3 id="3-1-4-删除镜像"><a href="#3-1-4-删除镜像" class="headerlink" title="3.1.4 删除镜像"></a>3.1.4 删除镜像</h3><p>可以按照镜像id删除镜像，命令如下：docker rmi 镜像ID</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/06c80bf0b706b6e999a9654c4e5818e5.png" fancybox="true"/></div></div>
-
-<p>删除单个镜像(-f 强制删除)：docker rmi -f 镜像ID</p>
-<p>删除多个镜像：docker rmi -f 镜像名1:TAG 镜像名2:TAG</p>
-<p>删除所有镜像：docker rmi -f $(docker images -qa)</p>
-<h3 id="3-15-从Docker-Hub拉取"><a href="#3-15-从Docker-Hub拉取" class="headerlink" title="3.15 从Docker Hub拉取"></a>3.15 从Docker Hub拉取</h3><p>Docker镜像首页，包括官方镜像和其它公开镜像。Docker Hub上最受欢迎的10大镜像（通过Docker registry API获取不了镜像被pull的个数，只能通过镜像的stars数量来衡量镜像的流行度。毫无疑问，拥有最高stars数量的库都是官方库）。</p>
-<p><a target="_blank" rel="noopener" href="https://hub.docker.com/search?image_filter=official&amp;type=image">https://hub.docker.com/search?image_filter=official&amp;type=image</a></p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/21fe65e0ed09cadb6b03360e2de4d0a6.png" fancybox="true"/></div></div>
-
-<p>国情的原因，国内下载 Docker HUB 官方的相关镜像比较慢，可以使用国内（docker.io）的一些镜像加速器，镜像保持和官方一致，关键是速度快，推荐使用。</p>
-<h2 id="3-2-容器相关命令"><a href="#3-2-容器相关命令" class="headerlink" title="3.2 容器相关命令"></a>3.2 容器相关命令</h2><p><strong>容器</strong>也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。</p>
-<p>如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/8673ef01f4e71756c584b83240e7c81f.png" fancybox="true"/></div></div>
-
-<h3 id="3-2-1-查看容器"><a href="#3-2-1-查看容器" class="headerlink" title="3.2.1 查看容器"></a>3.2.1 查看容器</h3><table>
-<thead>
-<tr>
-<th>查看正在运行的容器：</th>
-<th>docker ps</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>查看所有容器：</td>
-<td>docker ps –a</td>
-</tr>
-<tr>
-<td>查看最后一次运行的容器：</td>
-<td>docker ps –l</td>
-</tr>
-<tr>
-<td>查看停止的容器：</td>
-<td>docker ps -f status&#x3D;exited</td>
-</tr>
-</tbody></table>
-<h3 id="3-2-2-创建与启动容器"><a href="#3-2-2-创建与启动容器" class="headerlink" title="3.2.2 创建与启动容器"></a>3.2.2 创建与启动容器</h3><p>① 什么是宿主机？</p>
-<p>就是主机，这个概念是相对于子机而言的，比如你安装有虚拟机的话，那么相对于虚拟机而言，你正在使用的计算机就是宿主机，虚拟机是安装在主机上的，必须在主机上才能运行，主机就是一个“宿主”。</p>
-<p>② 创建容器常用的参数说明：</p>
-<p>创建容器命令：docker run</p>
-<table>
-<thead>
-<tr>
-<th>-i：表示运行容器 -t：表示容器启动后会进入其命令行。加入这两个参数后，容器创建就能登录进去。即分配一个伪终端。 –name :为创建的容器命名。 -v：表示目录映射关系（前者是宿主机目录，后者是映射到宿主机上的目录），可以使用多个－v做多个目录或文件映射。注意：最好做目录映射，在宿主机上做修改，然后共享到容器上。 -d：在run后面加上-d参数,则会创建一个<strong>守护式容器</strong>在后台运行（这样创建容器后不会自动登录容器，如果只加-i -t两个参数，创建后就会自动进去容器）。 -p：表示端口映射，前者是宿主机端口，后者是容器内的映射端口。可以使用多个-p做多个端口映射</th>
-</tr>
-</thead>
-</table>
-<p><strong>（1）交互式方式创建容器</strong></p>
-<p>以交互式方式创建并启动容器，启动完成后，直接进入当前容器。使用exit命令退出容器。需要注意的是以此种方式启动容器，如果退出容器，则容器会进入停止状态。可以理解成交互式容器 是前台容器。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name=容器名称 镜像名称:标签 /bin/bash</span><br><span class="line"># 比如：docker run -it --name=mycentos centos:7 /bin/bash</span><br><span class="line"># docker run:表示创建容器</span><br><span class="line"># -it：表示运行容器并进入它的命令行</span><br><span class="line"># --name=mycentos：给当前的容器命名</span><br><span class="line"># centos:7：使用该镜像创建</span><br><span class="line"># /bin/bash：放在镜像名后的是命令，这里我们希望有个交互式 Shell，因此用的是 /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>创建好容器，并且已经进入到容器内部了，可以直接观察前面中括号里面的内容发现，跟创建容器之前不一样了，</p>
-<p>并且 通过 dir 命令，会发现，其实容器内部也是一个 centos , 我们可以把每个容器都看成一个小电脑或者服务器</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/3bcfcd97029a7c7360062aa80b564240.png" fancybox="true"/></div></div>
-
-<p>重新开一个新的会话，查看刚刚创建的容器是否已经有了。</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/637443e4246352040d29de7b2260aba3.png" fancybox="true"/></div></div>
-
-<p>查看正在运行的容器：docker ps</p>
-<p>退出当前容器：<strong>exit</strong></p>
-<p>退出之后，容器也退出了，没有删除</p>
-<p><strong>(2) 创建后台容器</strong></p>
-<p><strong>docker run -id –name&#x3D;mycentos2 centos:7</strong></p>
-<p>查看 docker 容器已经运行</p>
-<p><strong>(3) 守护式方式创建容器：</strong></p>
-<p>创建一个守护式容器；如果对于一个需要长期运行的容器来说，我们可以创建一个守护式容器。</p>
-<p>命令如下（容器名称不能重复）：守护容器可以理解成在后台运行的容器</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 守护式容器和交互式容器的创建方式区别：</span><br><span class="line"># ① -it 换成 -di</span><br><span class="line"># ② 去掉后面的 /bin/bash</span><br><span class="line">docker run -di --name=容器名称 镜像名称:标签</span><br><span class="line"># 比如：docker run -di --name=mycentos10 centos:7</span><br></pre></td></tr></table></figure>
-
-<p>通过 docker ps 查看容器已经是运行状态</p>
-<p>进入守护式容器方式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 容器名称 (或者容器ID)  /bin/bash</span><br><span class="line"># 比如  docker exec -it mycentos10 /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>已经进入到容器内部了，如果现在退出exit，然后查看容器docker ps是否还在后台运行（仍在运行）</p>
-<h3 id="3-2-3-停止与启动容器"><a href="#3-2-3-停止与启动容器" class="headerlink" title="3.2.3 停止与启动容器"></a>3.2.3 停止与启动容器</h3><ul>
-<li>先通过 docker ps 查看正在运行的容器</li>
-<li>停止容器：</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>docker stop 容器名称（或者容器ID） 例如： docker stop mycentos2</th>
-</tr>
-</thead>
-</table>
-<ul>
-<li>创建完容器之后，停止容器</li>
-</ul>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/0adf6e45e433391ba782d17faf860905.png" fancybox="true"/></div></div>
-
-<ul>
-<li>查看容器是否已经停止</li>
-<li>启动容器：</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>docker start 容器名称（或者容器ID） 例如： docker start mycentos2 （以交互式运行的容器，只是第一次exit退出的时候会关闭容器，当用start启动的时候，就相当于后台启动了，exec进去之后再exit退出不会关闭容器）</th>
-</tr>
-</thead>
-</table>
-<ul>
-<li>查看容器是否已经启动</li>
-</ul>
-<h3 id="3-2-4-文件拷贝"><a href="#3-2-4-文件拷贝" class="headerlink" title="3.2.4 文件拷贝"></a>3.2.4 文件拷贝</h3><p>我们需要在容器内安装一个软件，软件首先需要有安装包，我们就需要把安装包拷贝到容器内。我们通常的操作是先把文件上传到宿主机，然后我们在将文件从宿主机拷贝到容器内的某个目录下面进行安装。</p>
-<p>将linux宿主机中的文件拷贝到容器内可以使用命令：</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/b1724dd4b8f9f38c064bc815a4e3a0fe.png" fancybox="true"/></div></div>
-
-<p>如果我们需要将文件拷贝到容器内可以使用cp命令</p>
-<table>
-<thead>
-<tr>
-<th>docker cp 需要拷贝的文件或目录 容器名称:容器目录 例如： docker cp anaconda-ks.cfg mycentos2:&#x2F;usr&#x2F;local&#x2F;</th>
-</tr>
-</thead>
-</table>
-<p>拷贝一个文件到 mycentos2 的 &#x2F;urs&#x2F;local&#x2F; 文件下面 ，拷贝完成之后，删除文件，然后在mycentos2拷贝过来</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/18cda7fca174d51bc37a27d1d5711041.png" fancybox="true"/></div></div>
-
-<p>登录容器查看拷贝之后的结果</p>
-<table>
-<thead>
-<tr>
-<th>docker exec -it mycentos2 &#x2F;bin&#x2F;bash  docker exec：表示登陆正在运行的容器  -it：进入命令行  mycentos2：进入到该容器</th>
-</tr>
-</thead>
-</table>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/7319ee760826c3c561bb41e94ac31585.png" fancybox="true"/></div></div>
-
-<p>也可以将文件从容器内拷贝出来</p>
-<table>
-<thead>
-<tr>
-<th>docker cp 容器名称:容器目录 需要拷贝的文件或目录 例如：docker cp mycentos2:&#x2F;usr&#x2F;local&#x2F;anaconda-ks.cfg .&#x2F;</th>
-</tr>
-</thead>
-</table>
-<p>我们先通过 exit 退出容器，然后在把文件从容器拷贝到当前目录</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/03816b61461eac44c2c85bbe5483ed43.png" fancybox="true"/></div></div>
-
-<h3 id="3-2-5-目录挂载"><a href="#3-2-5-目录挂载" class="headerlink" title="3.2.5 目录挂载"></a>3.2.5 目录挂载</h3><p>我们可以在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以通过修改宿主机某个目录的文件从而去影响容器。</p>
-<p>创建容器 添加-v参数 后边为 宿主机目录:容器目录，例如：</p>
-<table>
-<thead>
-<tr>
-<th># 创建并启动容器mycentos3,并挂载linux中的&#x2F;usr&#x2F;local&#x2F;myhtml目录到容器的&#x2F;usr&#x2F;local&#x2F;myhtml；也就是在linux中的&#x2F;usr&#x2F;local&#x2F;myhtml中操作相当于对容器相应目录操作 docker run -di –name&#x3D;容器的名字 -v &#x2F;usr&#x2F;local&#x2F;myhtml:&#x2F;usr&#x2F;local&#x2F;myhtml centos:7 比如：docker run -di –name&#x3D;mycentos3 -v &#x2F;usr&#x2F;local&#x2F;myhtml:&#x2F;usr&#x2F;local&#x2F;myhtml centos:7</th>
-</tr>
-</thead>
-</table>
-<p>通过 docker ps 查看正在运行的容器，在创建容器并且进行目录挂载，然后在通过 docker ps 查看刚刚创建的容器是否已经创建</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/09b37febc454d8546054fcaa3fd7dc1c.png" fancybox="true"/></div></div>
-
-<p>进入到 myhtml 目录 ，通过dir查看是否有文件，通过vi test2 ，创建一个文件，进入test2文件，随便输入一些数据</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/4d0019b6b9370ea0516d14609cd70011.png" fancybox="true"/></div></div>
-
-<p>进入目录随便输入一些东西 ， 退出保存</p>
-<p>登录容器，查看刚刚输入的内容</p>
-<p>hsg sdg d</p>
 
   
   
@@ -659,7 +453,7 @@
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html">这是分页标题</a></div><div class="item" id="next"></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">Docker基础</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html">Docker镜像管理</a></div></section></div>
 
   
 

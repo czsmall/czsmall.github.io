@@ -20,18 +20,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>docker：这是分页标题 - 小白记</title>
+  <title>docker：Docker基础 - 小白记</title>
 
   
-    <meta name="description" content="Docker容器虚拟化学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  第一章 Docker简介">
+    <meta name="description" content="Docker容器学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  Docker 资源汇总 Docker 官方主页: https:&#x2F;&#x2F;w">
 <meta property="og:type" content="website">
-<meta property="og:title" content="这是分页标题">
-<meta property="og:url" content="http://oshcz.cn/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html">
+<meta property="og:title" content="Docker基础">
+<meta property="og:url" content="http://oshcz.cn/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">
 <meta property="og:site_name" content="小白记">
-<meta property="og:description" content="Docker容器虚拟化学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  第一章 Docker简介">
+<meta property="og:description" content="Docker容器学习目标： 掌握Docker基础知识，能够理解Docker镜像与容器的概念 完成Docker安装与启动 掌握Docker镜像与容器相关命令 掌握Tomcat Nginx 等软件的常用应用的安装 掌握docker迁移与备份相关命令 能够运用Dockerfile编写创建容器的脚本 能够搭建与使用docker私有仓库  Docker 资源汇总 Docker 官方主页: https:&#x2F;&#x2F;w">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-24T11:22:54.457Z">
-<meta property="article:modified_time" content="2023-10-24T11:22:54.457Z">
+<meta property="article:published_time" content="2023-10-25T02:35:52.865Z">
+<meta property="article:modified_time" content="2023-10-25T02:35:52.865Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
   
@@ -75,13 +75,11 @@
 
 
 
-<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html"><div class="main" ff="title">docker</div><div class="sub normal cap">每个人的独博客</div><div class="sub hover cap" style="opacity:0"> Designed by xaoxuu</div></a></div></widget>
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/wiki"><svg aria-hidden="true" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"></path></svg>所有专栏</a><a class="title" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html"><div class="main" ff="title">docker</div><div class="sub normal cap">每个人的独博客</div><div class="sub hover cap" style="opacity:0"> Designed by xaoxuu</div></a></div></widget>
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/docker/" placeholder="在 /wiki/docker/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/index.html"><span class="toc-text">这是分页标题</span></a></div></div></widget>
-
-<widget class="widget-wrapper related"><div class="widget-header cap theme dis-select"><span class="name">更多SRE笔记</span></div><div class="widget-body related-posts"><a class="item wiki" href="/wiki/linux/index.html"><span class="title">Linux</span><span class="excerpt">Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。</span></a><a class="item wiki" href="/wiki/kubernetes/index.html"><span class="title">Kubernetes</span><span class="excerpt">Stellar 是一个内置 wiki 系统的 hexo 主题，适合综合型站点使用。同时也拥有简约而精美的视觉设计和丰富的标签插件，帮助您简单从容地应对各种场合。</span></a></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker安装与简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/06.Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker Compose容器编排</span></a></div></div></widget>
 </div>
 
 
@@ -94,11 +92,11 @@
   
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/index%20-%20%E5%89%AF%E6%9C%AC.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-24T11:22:54.457Z">2023-10-24</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T02:35:52.865Z">2023-10-25</time></div></div>
 
   <article class='md-text content wiki'>
-  <h1 class="article-title"><span>这是分页标题</span></h1>
-  <h1 id="Docker容器虚拟化"><a href="#Docker容器虚拟化" class="headerlink" title="Docker容器虚拟化"></a>Docker容器虚拟化</h1><h2 id="学习目标："><a href="#学习目标：" class="headerlink" title="学习目标："></a>学习目标：</h2><ul>
+  <h1 class="article-title"><span>Docker基础</span></h1>
+  <h1 id="Docker容器"><a href="#Docker容器" class="headerlink" title="Docker容器"></a>Docker容器</h1><h2 id="学习目标："><a href="#学习目标：" class="headerlink" title="学习目标："></a>学习目标：</h2><ul>
 <li>掌握Docker基础知识，能够理解Docker镜像与容器的概念</li>
 <li>完成Docker安装与启动</li>
 <li>掌握Docker镜像与容器相关命令</li>
@@ -107,14 +105,32 @@
 <li>能够运用Dockerfile编写创建容器的脚本</li>
 <li>能够搭建与使用docker私有仓库</li>
 </ul>
-<h1 id="第一章-Docker简介"><a href="#第一章-Docker简介" class="headerlink" title="第一章 Docker简介"></a>第一章 Docker简介</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+<h1 id="Docker-资源汇总"><a href="#Docker-资源汇总" class="headerlink" title="Docker 资源汇总"></a>Docker 资源汇总</h1><ul>
+<li>Docker 官方主页: <a target="_blank" rel="noopener" href="https://www.docker.com/">https://www.docker.com</a></li>
+<li>Docker 官方博客: <a target="_blank" rel="noopener" href="https://blog.docker.com/">https://blog.docker.com/</a></li>
+<li>Docker 官方文档: <a target="_blank" rel="noopener" href="https://docs.docker.com/">https://docs.docker.com/</a></li>
+<li>Docker Store: <a target="_blank" rel="noopener" href="https://store.docker.com/">https://store.docker.com</a></li>
+<li>Docker Cloud: <a target="_blank" rel="noopener" href="https://cloud.docker.com/">https://cloud.docker.com</a></li>
+<li>Docker Hub: <a target="_blank" rel="noopener" href="https://hub.docker.com/">https://hub.docker.com</a></li>
+<li>Docker 的源代码仓库: <a target="_blank" rel="noopener" href="https://github.com/moby/moby">https://github.com/moby/moby</a></li>
+<li>Docker 发布版本历史: <a target="_blank" rel="noopener" href="https://docs.docker.com/release-notes/">https://docs.docker.com/release-notes/</a></li>
+<li>Docker 常见问题: <a target="_blank" rel="noopener" href="https://docs.docker.com/engine/faq/">https://docs.docker.com/engine/faq/</a></li>
+<li>Docker 远端应用 API: <a target="_blank" rel="noopener" href="https://docs.docker.com/develop/sdk/">https://docs.docker.com/develop/sdk/</a></li>
+</ul>
+<h1 id="Docker-国内镜像"><a href="#Docker-国内镜像" class="headerlink" title="Docker 国内镜像"></a>Docker 国内镜像</h1><p>阿里云的加速器：<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/60750.html">https://help.aliyun.com/document_detail/60750.html</a></p>
+<p>网易加速器：<a target="_blank" rel="noopener" href="http://hub-mirror.c.163.com/">http://hub-mirror.c.163.com</a></p>
+<p>官方中国加速器：<a target="_blank" rel="noopener" href="https://registry.docker-cn.com/">https://registry.docker-cn.com</a></p>
+<p>ustc 的镜像：<a target="_blank" rel="noopener" href="https://docker.mirrors.ustc.edu.cn/">https://docker.mirrors.ustc.edu.cn</a></p>
+<p>daocloud：<a target="_blank" rel="noopener" href="https://www.daocloud.io/mirror#accelerator-doc%EF%BC%88%E6%B3%A8%E5%86%8C%E5%90%8E%E4%BD%BF%E7%94%A8%EF%BC%89">https://www.daocloud.io/mirror#accelerator-doc（注册后使用）</a></p>
+<p>如果有更好的资源，欢迎通过下面的笔记来分享。</p>
+
   
   
 
 
   </article>
   
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/docker/index.html">这是分页标题</a></div></section></div>
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html">Docker安装与简介</a></div></section></div>
 
   
 
