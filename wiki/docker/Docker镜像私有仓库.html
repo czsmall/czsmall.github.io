@@ -30,10 +30,26 @@
 <meta property="og:site_name" content="小白记">
 <meta property="og:description" content="在Docker中，当我们执行 docker pull xxx 的时候 ，它实际上是从 hub.docker.com 这个地址去查找，这就是 Docker 公司为我们提供的公共仓库。在工作中，我们不可能把企业项目 push 到公有仓库进行管理。所以为了更好的管理镜像，Docker 不仅提供了一个中央仓库，同时也允许我们搭建本地私有仓库。 docker容器镜像仓库分类：  公网仓库：docker hu">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-10-25T08:59:04.589Z">
-<meta property="article:modified_time" content="2023-10-25T08:59:04.589Z">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/har1.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor2.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor3.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor4.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor5.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor11.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/harbor12.png">
+<meta property="og:image" content="http://oshcz.cn/picture/harbor6.png">
+<meta property="og:image" content="http://oshcz.cn/picture/7.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/push.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/dockerHub.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/hub.login.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/hubpush.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/hub10.png">
+<meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/pull.png">
+<meta property="article:published_time" content="2023-10-25T09:26:04.197Z">
+<meta property="article:modified_time" content="2023-10-25T09:26:04.197Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://oshcz.cn/wiki/docker/picture/har1.png">
   
   
   
@@ -79,7 +95,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/docker/" placeholder="在 /wiki/docker/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker简介与安装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81registry%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">一、registry镜像仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81-registry-%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA"><span class="toc-text">1.1、 registry 仓库搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81registry%E4%BB%93%E5%BA%93%E5%BA%94%E7%94%A8-%E4%B8%8A%E4%BC%A0%E9%95%9C%E5%83%8F"><span class="toc-text">1.2、registry仓库应用-上传镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E3%80%81-registry%E4%BB%93%E5%BA%93%E5%BA%94%E7%94%A8-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="toc-text">1.3、 registry仓库应用-客户端下载镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4%E3%80%81registry%E5%B8%A6basic%E8%AE%A4%E8%AF%81%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">1.4、registry带basic认证的仓库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-harbor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">二、 harbor镜像仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-harbor%E4%B8%8B%E8%BD%BD"><span class="toc-text">2.1 harbor下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-docker-compose%E5%AE%89%E8%A3%85"><span class="toc-text">2.2 docker-compose安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-harbor%E5%AE%89%E8%A3%85"><span class="toc-text">2.3 harbor安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-docker%E8%AE%BE%E7%BD%AE%E4%BB%93%E5%BA%93%E4%B8%BAharbor"><span class="toc-text">2.4 docker设置仓库为harbor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E9%95%9C%E5%83%8F%E4%B8%8A%E4%BC%A0%E5%88%B0harbor"><span class="toc-text">2.5 镜像上传到harbor</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">常见问题</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker 实例</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker简介与安装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81registry%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">一、registry镜像仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1%E3%80%81-registry-%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA"><span class="toc-text">1.1、 registry 仓库搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2%E3%80%81registry%E4%BB%93%E5%BA%93%E5%BA%94%E7%94%A8-%E4%B8%8A%E4%BC%A0%E9%95%9C%E5%83%8F"><span class="toc-text">1.2、registry仓库应用-上传镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3%E3%80%81-registry%E4%BB%93%E5%BA%93%E5%BA%94%E7%94%A8-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F"><span class="toc-text">1.3、 registry仓库应用-客户端下载镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4%E3%80%81registry%E5%B8%A6basic%E8%AE%A4%E8%AF%81%E7%9A%84%E4%BB%93%E5%BA%93"><span class="toc-text">1.4、registry带basic认证的仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-harbor%E9%95%9C%E5%83%8F%E4%BB%93%E5%BA%93"><span class="toc-text">二、 harbor镜像仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-harbor%E4%B8%8B%E8%BD%BD"><span class="toc-text">2.1 harbor下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-docker-compose%E5%AE%89%E8%A3%85"><span class="toc-text">2.2 docker-compose安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-harbor%E5%AE%89%E8%A3%85"><span class="toc-text">2.3 harbor安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-docker%E8%AE%BE%E7%BD%AE%E4%BB%93%E5%BA%93%E4%B8%BAharbor"><span class="toc-text">2.4 docker设置仓库为harbor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E9%95%9C%E5%83%8F%E4%B8%8A%E4%BC%A0%E5%88%B0harbor"><span class="toc-text">2.5 镜像上传到harbor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BC%81%E4%B8%9A%E7%BA%A7%E4%BB%93%E5%BA%93%EF%BC%9AHarbor%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-text">三、企业级仓库：Harbor（推荐）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E5%87%86%E5%A4%87"><span class="toc-text">1. 实验准备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%83%A8%E7%BD%B2%E5%AE%89%E8%A3%85"><span class="toc-text">2. 部署安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BC%80%E5%90%AF%E6%89%AB%E6%8F%8F%E5%99%A8%EF%BC%88%E6%9C%80%E5%A5%BD%E4%BA%8B%E5%85%88%E5%BC%80%E5%90%AF%EF%BC%89"><span class="toc-text">3. 开启扫描器（最好事先开启）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%BF%E7%94%A8"><span class="toc-text">4. 客户端使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E4%BF%A1%E4%BB%BB"><span class="toc-text">4.1.添加本地信任</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD"><span class="toc-text">4.2.上传下载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-harbor%E5%AE%B9%E5%99%A8%E4%BB%8B%E7%BB%8D"><span class="toc-text">5. harbor容器介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BC%81%E4%B8%9A%E7%BA%A7%E4%BB%93%E5%BA%93%EF%BC%9AHarbor%E9%AB%98%E5%8F%AF%E7%94%A8"><span class="toc-text">6. 企业级仓库：Harbor高可用</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-%E9%98%BF%E9%87%8C"><span class="toc-text">四、 阿里</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%99%BB%E5%BD%95%E9%98%BF%E9%87%8C%E4%BA%91Docker-Registry"><span class="toc-text">1. 登录阿里云Docker Registry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B0%86%E9%95%9C%E5%83%8F%E6%8E%A8%E9%80%81%E5%88%B0aliyun-Registry"><span class="toc-text">2. 将镜像推送到aliyun Registry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%8ERegistry%E4%B8%AD%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F"><span class="toc-text">3. 从Registry中拉取镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81-%E5%AE%98%E6%96%B9%E4%BB%93%E5%BA%93%EF%BC%9Adocker"><span class="toc-text">五、 官方仓库：docker</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%99%BB%E5%BD%95hub-Docker-Registry"><span class="toc-text">1.登录hub.Docker Registry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B0%86%E9%95%9C%E5%83%8F%E6%8E%A8%E9%80%81%E5%88%B0aliyun-Registry-1"><span class="toc-text">2.  将镜像推送到aliyun Registry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%8ERegistry%E4%B8%AD%E6%8B%89%E5%8F%96%E9%95%9C%E5%83%8F-1"><span class="toc-text">3,从Registry中拉取镜像</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF%E3%80%82"><span class="toc-text">查看认证信息。</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker 实例</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div></div></widget>
 </div>
 
 
@@ -92,7 +108,7 @@
   
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T08:59:04.589Z">2023-10-25</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T09:26:04.197Z">2023-10-25</time></div></div>
 
   <article class='md-text content wiki'>
   <h1 class="article-title"><span>私有仓库registry</span></h1>
@@ -176,7 +192,7 @@
 <p>f、登录认证</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker login 192.168.1.150:10000</span><br><span class="line">Username：zutuanxue</span><br><span class="line">Password：123456</span><br></pre></td></tr></table></figure>
 
-<h1 id="二、-harbor镜像仓库"><a href="#二、-harbor镜像仓库" class="headerlink" title="二、 harbor镜像仓库"></a>二、 harbor镜像仓库</h1><p>Harbor离线安装包下载地址：<a target="_blank" rel="noopener" href="https://github.com/goharbor/harbor">https://github.com/goharbor/harbor</a></p>
+<h2 id="二、-harbor镜像仓库"><a href="#二、-harbor镜像仓库" class="headerlink" title="二、 harbor镜像仓库"></a>二、 harbor镜像仓库</h2><p>Harbor离线安装包下载地址：<a target="_blank" rel="noopener" href="https://github.com/goharbor/harbor">https://github.com/goharbor/harbor</a></p>
 <p>docker-compose版本选择:<a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">https://github.com/docker/compose/releases</a></p>
 <h3 id="2-1-harbor下载"><a href="#2-1-harbor下载" class="headerlink" title="2.1 harbor下载"></a>2.1 harbor下载</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos8_manage01 ~]# wget https://storage.googleapis.com/harbor-releases/release-1.9.0/harbor-offline-installer-v1.9.2-rc1.tgz</span><br></pre></td></tr></table></figure>
 
@@ -189,11 +205,169 @@
 
 <h3 id="2-5-镜像上传到harbor"><a href="#2-5-镜像上传到harbor" class="headerlink" title="2.5 镜像上传到harbor"></a>2.5 镜像上传到harbor</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#登陆harbor</span><br><span class="line">[root@centos8_manage01 harbor]# docker login http://192.168.98.240 -u admin -p Harbor12345</span><br><span class="line">WARNING! Using --password via the CLI is insecure. Use --password-stdin.</span><br><span class="line">WARNING! Your password will be stored unencrypted in /root/.docker/config.json.</span><br><span class="line">Configure a credential helper to remove this warning. See</span><br><span class="line">https://docs.docker.com/engine/reference/commandline/login/#credentials-store</span><br><span class="line"></span><br><span class="line">Login Succeeded</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#修改镜像name:tag为harbor仓库名</span><br><span class="line">[root@centos8_manage01 harbor]# docker tag baishuming2020:latest 192.168.98.240/library/centos_web:v1</span><br><span class="line"></span><br><span class="line">#上传镜像</span><br><span class="line">[root@centos8_manage01 harbor]# docker push 192.168.98.240/library/centos_web:v1</span><br><span class="line">The push refers to repository [192.168.98.240/library/centos_web]</span><br><span class="line">968786242e9d: Pushed </span><br><span class="line">v1: digest: sha256:d204253a33c6c2c74273fbd003cf3e14a48bcdd5c7bc10f51ccbad9e4dd39699 size: 528</span><br></pre></td></tr></table></figure>
 
-<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><p>docker-compose命令无法使用<br>[root@centos8_manage01 ~]# docker-compose ps<br>ERROR:<br>Can’t find a suitable configuration file in this directory or any<br>parent. Are you in the right directory?</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>docker-compose命令无法使用<br>[root@centos8_manage01 ~]# docker-compose ps<br>ERROR:<br>Can’t find a suitable configuration file in this directory or any<br>parent. Are you in the right directory?</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Supported filenames: docker-compose.yml, docker-compose.yaml</span><br></pre></td></tr></table></figure>
 
 <p>原因： <strong>当前目录没有配置文件</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">正确执行路径   harbor安装目录</span><br><span class="line">[root@centos8_manage01 harbor]# docker-compose ps </span><br><span class="line">      Name                     Command                State               Ports          </span><br><span class="line">-----------------------------------------------------------------------------------------</span><br><span class="line">harbor-core         /harbor/harbor_core              Up                                  </span><br><span class="line">harbor-db           /docker-entrypoint.sh            Up         5432/tcp                 </span><br><span class="line">harbor-jobservice   /harbor/harbor_jobservice  ...   Up                                  </span><br><span class="line">harbor-log          /bin/sh -c /usr/local/bin/ ...   Up         127.0.0.1:1514-&gt;10514/tcp</span><br><span class="line">harbor-portal       nginx -g daemon off;             Up         8080/tcp                 </span><br><span class="line">nginx               nginx -g daemon off;             Up         0.0.0.0:80-&gt;8080/tcp     </span><br><span class="line">redis               redis-server /etc/redis.conf     Up         6379/tcp                 </span><br><span class="line">registry            /entrypoint.sh /etc/regist ...   Up         5000/tcp                 </span><br><span class="line">registryctl         /harbor/start.sh                 Exit 137        </span><br></pre></td></tr></table></figure>
+
+<h2 id="三、企业级仓库：Harbor（推荐）"><a href="#三、企业级仓库：Harbor（推荐）" class="headerlink" title="三、企业级仓库：Harbor（推荐）"></a>三、企业级仓库：Harbor（推荐）</h2><blockquote>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://goharbor.io/">Harbor</a> 是一个用于存储和分发 Docker 镜像的企业级 Registry 服务器。</p>
+</li>
+<li><p>扩展了开源 Docker Distribution。作为一个企业级私有 Registry 服务器，Harbor 提供了更好的性能和安全</p>
+</li>
+<li><p><strong>支持镜像扫描：恶意程序，bug等。</strong></p>
+</li>
+<li><p>硬件配置根据具体需求而定，<a target="_blank" rel="noopener" href="https://goharbor.io/docs/2.6.0/install-config">官方文档</a></p>
+</li>
+<li><p>node节点都需要配置信任关系，否则上传不了镜像</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="1-实验准备"><a href="#1-实验准备" class="headerlink" title="1. 实验准备"></a>1. 实验准备</h3><ul>
+<li>获取安装程序：确认版本前往<a target="_blank" rel="noopener" href="https://github.com/goharbor/harbor">github源码</a>下载源码安装包。</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/har1.png" fancybox="true"/></div></div>
+
+<ul>
+<li><p>安装docker <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases">docker-compose</a>依赖：docker version 16.7以上。</p>
+<pre><code>    1.上github找到[docker](https://github.com/docker)/**[compose](https://github.com/docker/compose)**项目。下载[docker-compose](https://github.com/docker/compose/releases)
+      
+    2.解压cp/usr/bin/目录下并改名： &#123;% u cp docker-compose-linux-x86_64 /usr/bin/docker-compose %&#125; #a+x权限
+      
+    3.执行docker-compose version ，是否显示版本号。
+</code></pre>
+</li>
+<li><p>更改barbor配置文件</p>
+<p>tar -xvf harbor-offline-installer-v2.6.1.tgz</p>
+<p>cp harbor.yml.tmpl harbor.yml</p>
+<p>vim  harbor.yml</p>
+<p>hostname: harbor.子域名.com   #可以是域名&#x2F;ip&#x2F;主机名</p>
+<p>harbor_admin_password: 12345  #密码</p>
+<p>  password: root123  #数据库容器密码</p>
+<p>data_volume: &#x2F;data&#x2F;harbordata# 数据挂载点</p>
+</li>
+</ul>
+<h3 id="2-部署安装"><a href="#2-部署安装" class="headerlink" title="2. 部署安装"></a>2. 部署安装</h3><p>1.安装</p>
+<p>[root@harbor harbor]# .&#x2F;install.sh     #做好准备工作执行安装脚本</p>
+<ul>
+<li><p>安装完成，更改hosts解析，访问 harbor.子域名.com确认结果</p>
+</li>
+<li><p>账户默认admin  密码自己前面配置指定 </p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor2.png" fancybox="true"/></div></div></li>
+</ul>
+<p>2.逻辑</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor3.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor4.png" fancybox="true"/></div></div>
+
+<h3 id="3-开启扫描器（最好事先开启）"><a href="#3-开启扫描器（最好事先开启）" class="headerlink" title="3. 开启扫描器（最好事先开启）"></a>3. 开启扫描器（最好事先开启）</h3><p> <strong>trivy</strong>：<a target="_blank" rel="noopener" href="https://github.com/aquasecurity/trivy">hithub项目地址</a></p>
+<p>安装前：.&#x2F;install.sh –with-clair   新版本：.&#x2F;install.sh –with-trivy</p>
+<p>安装后：.&#x2F;prepare –with-clair     新版本：.&#x2F;prepare  –with-trivy</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor5.png" fancybox="true"/></div></div>
+
+<h3 id="4-客户端使用"><a href="#4-客户端使用" class="headerlink" title="4. 客户端使用"></a>4. 客户端使用</h3><h4 id="4-1-添加本地信任"><a href="#4-1-添加本地信任" class="headerlink" title="4.1.添加本地信任"></a>4.1.添加本地信任</h4><p>添加信任关系，修改docker.servicer文件：–insecure-registry harbor.域名.com&#x2F;ip：端口</p>
+<h4 id="4-2-上传下载"><a href="#4-2-上传下载" class="headerlink" title="4.2.上传下载"></a>4.2.上传下载</h4><blockquote>
+<p>解析——配置docker文件——登录到私有仓库</p>
+<p>在仓库先创建好项目名称</p>
+</blockquote>
+<p> systemctl daemon-reload</p>
+<p> systemctl restart docker</p>
+<ul>
+<li>登录到仓库：docker login harbor.域名.com</li>
+<li>修改镜像tag：</li>
+</ul>
+<p>docker tag registry.cn-shanghai.aliyuncs.com&#x2F;czsmall&#x2F;mes:1.1 harbor.boloni.com&#x2F;mes&#x2F;nginx:1.1</p>
+<ul>
+<li>上传下载</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor11.png" fancybox="true"/></div></div>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/harbor12.png" fancybox="true"/></div></div>
+
+<h3 id="5-harbor容器介绍"><a href="#5-harbor容器介绍" class="headerlink" title="5. harbor容器介绍"></a>5. harbor容器介绍</h3><ul>
+<li><p>nginx：harbor 的一个反向代理组件，代理 registry、ui、token 等服务。这个代 理会转发 harbor web 和 docker client 的各种请求到后端服务上。 </p>
+</li>
+<li><p>harbor-adminserver：harbor 系统管理接口，可以修改系统配置以及获取系统信 息。 </p>
+</li>
+<li><p>harbor-db：存储项目的元数据、用户、规则、复制策略等信息。 </p>
+</li>
+<li><p>harbor-jobservice：harbor 里面主要是为了镜像仓库之前同步使用的。 harbor-log：收集其他 harbor 的日志信息。 harbor-ui：一个用户界面模块，用来管理 registry。 </p>
+</li>
+<li><p>registry：存储 docker images 的服务，并且提供 pull&#x2F;push 服务。 </p>
+</li>
+<li><p>redis：存储缓存信息 webhook：当 registry 中的 image 状态发生变化的时候去记录更新日志、复制 等操作。 </p>
+</li>
+<li><p>token service：在 docker client 进行 pull&#x2F;push 的时候负责 token 的发放。</p>
+</li>
+</ul>
+<h3 id="6-企业级仓库：Harbor高可用"><a href="#6-企业级仓库：Harbor高可用" class="headerlink" title="6. 企业级仓库：Harbor高可用"></a>6. 企业级仓库：Harbor高可用</h3><blockquote>
+<p>基于共享存储：</p>
+<p>基于内部docker复制功能：类似于 MySQL 的主从同步， 其可以实现不同的数据中心、不同的运行环境之间同步镜像，并提供友好的管理 界面，大大简化了实际运维中的镜像管理工作</p>
+</blockquote>
+<p>仓库同步+HAproxy实现</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/picture/harbor6.png" fancybox="true"/></div></div>
+
+<p><strong>一：仓库管理</strong>#两边都需要配置</p>
+<ul>
+<li><p>目标名;对方的仓库名称，目标url：对方的地址：http….访问i账号，密码</p>
+<p><strong>二：同步管理</strong>#两边都需要配置</p>
+</li>
+<li><p>在主服务器端配置：两边项目名称必须一致，同步模式选push-based，触发模式：事件</p>
+</li>
+</ul>
+<h2 id="四、-阿里"><a href="#四、-阿里" class="headerlink" title="四、 阿里"></a>四、 阿里</h2><blockquote>
+<p>公司的容器千万不要上传到共有仓库 </p>
+<p>官方仓库：目前有阿里与hub.Docker。因Docker官方仓库在国外，访问不稳定。不做重点使用。</p>
+<p>私有仓库：</p>
+<p>创建镜像时。共有仓库上传需要认证，而下载不需要。私有仓库无论上传下载都需要认证。</p>
+<p>docker官方仓库不需要指定URL，直接docker login登录</p>
+<p>信任仓库如果仅仅是下载镜像就不需要登录即可下载(在dockerd的service文件添加–insecure-registry 172.31.6.102:80)</p>
+</blockquote>
+<h3 id="1-登录阿里云Docker-Registry"><a href="#1-登录阿里云Docker-Registry" class="headerlink" title="1. 登录阿里云Docker Registry"></a>1. 登录阿里云Docker Registry</h3><p>1，<a target="_blank" rel="noopener" href="https://cr.console.aliyun.com/">登录</a>阿里容器镜像服务,找到实列列表——个人实例&#x2F;企业版——镜像仓库</p>
+<p>2，创建仓库。命令空间可以理解为一个tag。仓库名称可以理解为什么同一个项目的名称。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/picture/7.png" fancybox="true"/></div></div>
+
+
+
+<p>3，回到作者的电脑，登录自己的镜像仓库：docker login 回车密码后，<u>提示Login Succeeded</u>才算成功</p>
+<p>$   docker login –username&#x3D;账号@163.com registry.cn-shanghai.aliyuncs.com<br>$   Password:</p>
+<h3 id="2-将镜像推送到aliyun-Registry"><a href="#2-将镜像推送到aliyun-Registry" class="headerlink" title="2. 将镜像推送到aliyun Registry"></a>2. 将镜像推送到aliyun Registry</h3><p>border 修改tag格式-上传<br>$ docker tag [本地镜像:版本号] registry.cn-shanghai.aliyuncs.com&#x2F;czsmall&#x2F;mes:[镜像版本号]</p>
+<p>$ docker push registry.cn-shanghai.aliyuncs.com&#x2F;czsmall&#x2F;mes:[镜像版本号]</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/push.png" fancybox="true"/></div></div>
+
+<h3 id="3-从Registry中拉取镜像"><a href="#3-从Registry中拉取镜像" class="headerlink" title="3. 从Registry中拉取镜像"></a>3. 从Registry中拉取镜像</h3><p>$ docker pull registry.cn-shanghai.aliyuncs.com&#x2F;czsmall&#x2F;mes:[镜像版本号]</p>
+<h2 id="五、-官方仓库：docker"><a href="#五、-官方仓库：docker" class="headerlink" title="五、 官方仓库：docker"></a>五、 官方仓库：docker</h2><h3 id="1-登录hub-Docker-Registry"><a href="#1-登录hub-Docker-Registry" class="headerlink" title="1.登录hub.Docker Registry"></a>1.登录hub.Docker Registry</h3><p>1.登录(<a target="_blank" rel="noopener" href="https://hub.docker.com/">Docker Hub</a>,创建仓库。</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="\wiki\zabbix\picture/dockerHub.png" fancybox="true"/></div></div>
+
+<p>2.回到作者电脑，登录自己的镜像仓库：docker login 回车密码后，<u>提示Login Succeeded</u>才算成功</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/wiki/zabbix/picture/hub.login.png" fancybox="true"/></div></div>
+
+
+<p>$ docker login docke</p>
+<p>Username: czsmall</p>
+<p>Password: </p>
+<h3 id="2-将镜像推送到aliyun-Registry-1"><a href="#2-将镜像推送到aliyun-Registry-1" class="headerlink" title="2.  将镜像推送到aliyun Registry"></a>2.  将镜像推送到aliyun Registry</h3><blockquote>
+<p><strong>首先修改本地需要上传的images，tag</strong>。格式：<u>仓库名字或者项目名/镜像images名：tag</u></p>
+<p>上传时可不写域名，默认为什么hub.docker。</p>
+</blockquote>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/wiki/zabbix/picture/hubpush.png" fancybox="true"/></div></div>
+
+
+
+<p>docker tag harvey&#x2F;nginx:1.3  docker.io&#x2F;czsmall&#x2F;nginx:1.1   #给镜像打tag</p>
+<p>docker push docker.io&#x2F;czsmall&#x2F;nginx:1.1          #上传镜像</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="picture/hub10.png" fancybox="true"/></div></div>
+
+<h3 id="3-从Registry中拉取镜像-1"><a href="#3-从Registry中拉取镜像-1" class="headerlink" title="3,从Registry中拉取镜像"></a>3,从Registry中拉取镜像</h3><p>docker pull czsmall&#x2F;nginx:1.1  #下载镜像到本地</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="\wiki\zabbix\picture/pull.png" fancybox="true"/></div></div>
+
+<h2 id="查看认证信息。"><a href="#查看认证信息。" class="headerlink" title="查看认证信息。"></a>查看认证信息。</h2><blockquote>
+<p>#登录成功之后会在当前目录生成一个隐藏文件用于保存登录认证信息</p>
+</blockquote>
+<p>[root@k-node2 ~]# cat &#x2F;root&#x2F;.docker&#x2F;config.json<br>{<br>    “auths”: {<br>        “<a target="_blank" rel="noopener" href="https://index.docker.io/v1/">https://index.docker.io/v1/</a>“: {<br>            “auth”: “Y3pzbp6aGFoMDgwNzE1MTU&#x3D;”<br>        },<br>        “registry.cn-shanghai.aliyuncs.com”: {<br>            “auth”: “aGNvbmNvbTp6aGFoMDgwNw&#x3D;&#x3D;”<br>        }<br>    }</p>
+
   
   
 
