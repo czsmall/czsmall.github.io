@@ -44,8 +44,8 @@
 <meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/hubpush.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/zabbix/picture/hub10.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/picture/pull.png">
-<meta property="article:published_time" content="2023-10-25T08:00:41.588Z">
-<meta property="article:modified_time" content="2023-10-25T08:00:41.588Z">
+<meta property="article:published_time" content="2023-10-25T08:02:48.538Z">
+<meta property="article:modified_time" content="2023-10-25T08:02:48.538Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="d:\%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%96%99\%E5%8D%9A%E5%AE%A2%E7%9B%B8%E5%85%B3\blog-demo\source\wiki\zabbix\picture\har1.png">
@@ -107,7 +107,7 @@
   
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T08:00:41.588Z">2023-10-25</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T08:02:48.538Z">2023-10-25</time></div></div>
 
   <article class='md-text content wiki'>
   <h1 class="article-title"><span>私有仓库registry</span></h1>
@@ -203,7 +203,21 @@
 <li><p>token service：在 docker client 进行 pull&#x2F;push 的时候负责 token 的发放。</p>
 </li>
 </ul>
-<h1 id="高可用：Harbor"><a href="#高可用：Harbor" class="headerlink" title="高可用：Harbor"></a>高可用：Harbor</h1><h2 id="1-仓库管理"><a href="#1-仓库管理" class="headerlink" title="1. 仓库管理"></a>1. 仓库管理</h2><blockquote>
+<h1 id="高可用：Harbor"><a href="#高可用：Harbor" class="headerlink" title="高可用：Harbor"></a>高可用：Harbor</h1><blockquote>
+<ul>
+<li><p><a target="_blank" rel="noopener" href="https://goharbor.io/">Harbor</a> 是一个用于存储和分发 Docker 镜像的企业级 Registry 服务器。</p>
+</li>
+<li><p>扩展了开源 Docker Distribution。作为一个企业级私有 Registry 服务器，Harbor 提供了更好的性能和安全</p>
+</li>
+<li><p><strong>支持镜像扫描：恶意程序，bug等。</strong></p>
+</li>
+<li><p>硬件配置根据具体需求而定，<a target="_blank" rel="noopener" href="https://goharbor.io/docs/2.6.0/install-config">官方文档</a></p>
+</li>
+<li><p>node节点都需要配置信任关系，否则上传不了镜像</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="1-仓库管理"><a href="#1-仓库管理" class="headerlink" title="1. 仓库管理"></a>1. 仓库管理</h2><blockquote>
 <p>基于共享存储：</p>
 <p>基于内部docker复制功能：类似于 MySQL 的主从同步， 其可以实现不同的数据中心、不同的运行环境之间同步镜像，并提供友好的管理 界面，大大简化了实际运维中的镜像管理工作</p>
 </blockquote>
