@@ -23,12 +23,12 @@
   <title>docker：Docker容器封装 - 小白记</title>
 
   
-    <meta name="description" content="3.2 容器相关命令容器也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。 如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。   3.2.1 查">
+    <meta name="description" content="3.2 容器相关命令  容器也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。 如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。   3.2.1 查">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Docker容器封装">
 <meta property="og:url" content="http://oshcz.cn/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html">
 <meta property="og:site_name" content="小白记">
-<meta property="og:description" content="3.2 容器相关命令容器也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。 如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。   3.2.1 查">
+<meta property="og:description" content="3.2 容器相关命令  容器也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。 如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。   3.2.1 查">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/8673ef01f4e71756c584b83240e7c81f.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/3bcfcd97029a7c7360062aa80b564240.png">
@@ -40,8 +40,8 @@
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/03816b61461eac44c2c85bbe5483ed43.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/09b37febc454d8546054fcaa3fd7dc1c.png">
 <meta property="og:image" content="http://oshcz.cn/wiki/docker/media/4d0019b6b9370ea0516d14609cd70011.png">
-<meta property="article:published_time" content="2023-10-25T02:38:53.537Z">
-<meta property="article:modified_time" content="2023-10-25T02:38:53.537Z">
+<meta property="article:published_time" content="2023-10-25T02:57:30.076Z">
+<meta property="article:modified_time" content="2023-10-25T02:57:30.076Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://oshcz.cn/wiki/docker/media/8673ef01f4e71756c584b83240e7c81f.png">
@@ -90,7 +90,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/docker/" placeholder="在 /wiki/docker/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker安装与简介</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E5%AE%B9%E5%99%A8%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"><span class="toc-text">3.2 容器相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.1 查看容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.2 创建与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E5%81%9C%E6%AD%A2%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.3 停止与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D"><span class="toc-text">3.2.4 文件拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-%E7%9B%AE%E5%BD%95%E6%8C%82%E8%BD%BD"><span class="toc-text">3.2.5 目录挂载</span></a></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/06.Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker Compose容器编排</span></a></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">docker基础</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/02.Docker%E5%AE%89%E8%A3%85%E4%B8%8E%E7%AE%80%E4%BB%8B.html"><span class="toc-text">Docker简介与安装</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/03.Docker%E9%95%9C%E5%83%8F%E7%AE%A1%E7%90%86.html"><span class="toc-text">Docker镜像管理</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/docker/04.Docker%E5%AE%B9%E5%99%A8%E5%B0%81%E8%A3%85.html"><span class="toc-text">Docker容器封装</span></a><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-%E6%9F%A5%E7%9C%8B%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.1 查看容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-%E5%88%9B%E5%BB%BA%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.2 创建与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-%E5%81%9C%E6%AD%A2%E4%B8%8E%E5%90%AF%E5%8A%A8%E5%AE%B9%E5%99%A8"><span class="toc-text">3.2.3 停止与启动容器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-4-%E6%96%87%E4%BB%B6%E6%8B%B7%E8%B4%9D"><span class="toc-text">3.2.4 文件拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-5-%E7%9B%AE%E5%BD%95%E6%8C%82%E8%BD%BD"><span class="toc-text">3.2.5 目录挂载</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/05.Dockerfile.html"><span class="toc-text">Dockerfile</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/06.Docker%E9%95%9C%E5%83%8F%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93.html"><span class="toc-text">私有仓库registry</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/08.Docker%20Compose%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92.html"><span class="toc-text">08.Docker Compose容器编排</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/docker/07.Docker%E5%AE%9E%E4%BE%8B.html"><span class="toc-text">07.Docker Compose容器编排</span></a></div></div></widget>
 </div>
 
 
@@ -103,14 +103,14 @@
   
   
   
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T02:38:53.537Z">2023-10-25</time></div></div>
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki/">专栏</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/docker/01.%E9%BB%98%E8%AE%A4%E9%A1%B5.html">docker</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-10-25T02:57:30.076Z">2023-10-25</time></div></div>
 
   <article class='md-text content wiki'>
   <h1 class="article-title"><span>Docker容器封装</span></h1>
-  <ul>
-<li></li>
-</ul>
-<h2 id="3-2-容器相关命令"><a href="#3-2-容器相关命令" class="headerlink" title="3.2 容器相关命令"></a>3.2 容器相关命令</h2><p><strong>容器</strong>也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。</p>
+  <blockquote>
+<p>3.2 容器相关命令</p>
+</blockquote>
+<p><strong>容器</strong>也是docker中的核心概念，镜像是创建容器的软件 , 容器是由镜像运行产生的运行实例。镜像和容器的关系，就如同Java语言中类和对象的关系。</p>
 <p>如果需要通俗的描述容器的话，我觉得容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用。比如网站、程序甚至是系统环境。</p>
 <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="media/8673ef01f4e71756c584b83240e7c81f.png" fancybox="true"/></div></div>
 
