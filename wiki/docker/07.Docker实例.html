@@ -300,22 +300,22 @@
 <h2 id="linux科学实现科学上网"><a href="#linux科学实现科学上网" class="headerlink" title="** linux科学实现科学上网**"></a>** linux科学实现科学上网**</h2><h3 id="安装-Clash"><a href="#安装-Clash" class="headerlink" title="安装 Clash"></a>安装 Clash</h3><ol>
 <li>下载当前操作系统与 CPU 架构对应的包文件，我这儿是 X86_64 平台下 CentOS7 所以对应的使用 <a target="_blank" rel="noopener" href="https://github.com/Dreamacro/clash/releases/download/v1.6.5/clash-linux-amd64-v1.6.5.gz">clash-linux-amd64-v1.6.5.gz</a> 包即可</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.6.5/clash-linux-amd64-v1.6.5.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.6.5/clash-linux-amd64-v1.6.5.gz</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>下载好后解压安装包中 clash 到 <code>/usr/local/bin/</code> 目录下，并删除压缩包文件</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gzip -dc clash.gz &gt; /usr/local/bin/clash</span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/clash</span><br><span class="line"><span class="built_in">rm</span> -f clash.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gzip -dc clash.gz &gt; /usr/local/bin/clash</span><br><span class="line"><span class="built_in">chmod</span> +x /usr/local/bin/clash</span><br><span class="line"><span class="built_in">rm</span> -f clash.gz</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>创建配置文件目录，并下载 MMDB 文件</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /etc/clash</span><br><span class="line">wget -O /etc/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/download/20220812/Country.mmdb</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /etc/clash</span><br><span class="line">wget -O /etc/clash/Country.mmdb https://github.com/Dreamacro/maxmind-geoip/releases/download/20220812/Country.mmdb</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>创建 <code>systemd</code> 脚本，脚本文件路径为 <code>/etc/systemd/system/clash.service</code>，内容如下：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=clash daemon</span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">ExecStart=/usr/local/bin/clash -d /etc/clash/</span><br><span class="line">Restart=on-failure</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Unit]</span><br><span class="line">Description=clash daemon</span><br><span class="line">[Service]</span><br><span class="line">Type=simple</span><br><span class="line">User=root</span><br><span class="line">ExecStart=/usr/local/bin/clash -d /etc/clash/</span><br><span class="line">Restart=on-failure</span><br><span class="line">[Install]</span><br><span class="line">WantedBy=multi-user.target</span><br></pre></td></tr></table></figure>
 
 <ol start="5">
 <li>重载 systemctl daemon</li>
@@ -324,27 +324,27 @@
 <h3 id="配置代理上网"><a href="#配置代理上网" class="headerlink" title="配置代理上网"></a>配置代理上网</h3><ol>
 <li>导入已有的科学上网<code>订阅链接</code></li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/clash/config.yaml [你的订阅链接]</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">wget -O /etc/clash/config.yaml [你的订阅链接]</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>设置系统代理，添加配置文件 <code>/etc/profile.d/proxy.sh</code> 并在其中写入如下内容：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> no_proxy=<span class="string">&quot;localhost, 127.0.0.1&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=<span class="string">&quot;127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> https_proxy=<span class="string">&quot;127.0.0.1:7890&quot;</span></span><br><span class="line"><span class="built_in">export</span> no_proxy=<span class="string">&quot;localhost, 127.0.0.1&quot;</span></span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>重载 <code>/etc/profile</code> 配置</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li><p>启动 <code>clash</code> 服务，并设置为开机自动启</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl google.com</span></span><br><span class="line">&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=<span class="string">&quot;content-type&quot;</span> content=<span class="string">&quot;text/html;charset=utf-8&quot;</span>&gt;</span><br><span class="line">&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;</span><br><span class="line">&lt;H1&gt;301 Moved&lt;/H1&gt;</span><br><span class="line">The document has moved</span><br><span class="line">&lt;A HREF=<span class="string">&quot;http://www.google.com/&quot;</span>&gt;here&lt;/A&gt;.</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># curl google.com</span></span><br><span class="line">&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=<span class="string">&quot;content-type&quot;</span> content=<span class="string">&quot;text/html;charset=utf-8&quot;</span>&gt;</span><br><span class="line">&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;</span><br><span class="line">&lt;H1&gt;301 Moved&lt;/H1&gt;</span><br><span class="line">The document has moved</span><br><span class="line">&lt;A HREF=<span class="string">&quot;http://www.google.com/&quot;</span>&gt;here&lt;/A&gt;.</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
 
 </li>
 <li><p>测试 goolge.com 访问</p>
 </li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># curl google.com</span></span><br><span class="line">&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=<span class="string">&quot;content-type&quot;</span> content=<span class="string">&quot;text/html;charset=utf-8&quot;</span>&gt;</span><br><span class="line">&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;</span><br><span class="line">&lt;H1&gt;301 Moved&lt;/H1&gt;</span><br><span class="line">The document has moved</span><br><span class="line">&lt;A HREF=<span class="string">&quot;http://www.google.com/&quot;</span>&gt;here&lt;/A&gt;.</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># curl google.com</span></span><br><span class="line">&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=<span class="string">&quot;content-type&quot;</span> content=<span class="string">&quot;text/html;charset=utf-8&quot;</span>&gt;</span><br><span class="line">&lt;TITLE&gt;301 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;</span><br><span class="line">&lt;H1&gt;301 Moved&lt;/H1&gt;</span><br><span class="line">The document has moved</span><br><span class="line">&lt;A HREF=<span class="string">&quot;http://www.google.com/&quot;</span>&gt;here&lt;/A&gt;.</span><br><span class="line">&lt;/BODY&gt;&lt;/HTML&gt;</span><br></pre></td></tr></table></figure>
 
 
   
