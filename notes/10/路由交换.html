@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="小白记">
 <meta property="og:description" content="局域网小工具常用命令思科show ip interface brief  开局配置DHCP：工作原理思科华为华三锐捷ip dhcp pool global                      &#x2F;&#x2F;global是pool name， 由用户指定  default-router 10.1.1.100              &#x2F;&#x2F;为客户机配置默认网关  network 10.1.0.0 255.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-22T03:13:04.484Z">
-<meta property="article:modified_time" content="2023-11-22T03:13:04.484Z">
+<meta property="article:published_time" content="2023-12-26T06:52:35.536Z">
+<meta property="article:modified_time" content="2023-12-26T06:52:35.536Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
   
@@ -82,7 +82,7 @@
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/notes/10/" placeholder="在 /notes/10/ 中搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
 
-<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">工具与效率</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/1/Chome.html"><span class="toc-text">Chome</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/2/index.html"><span class="toc-text">Andriod</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><span class="toc-text">常用小工具</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html"><span class="toc-text">常见小问题</span></a></div></div><div class="widget-header cap dis-select"><span class="name">挖个坑-慢慢填</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html"><span class="toc-text">路由交换</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="toc-text">局域网小工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">开局配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP%EF%BC%9A%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">DHCP：工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-Snooping%EF%BC%9A%E5%9C%BA%E6%99%AF"><span class="toc-text">DHCP Snooping：场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%8E%AF%EF%BC%9A%E7%8E%AF%E8%B7%AF%E6%A3%80%E6%B5%8B"><span class="toc-text">防环：环路检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Telnet"><span class="toc-text">Telnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E5%A4%87%E5%A0%86%E5%8F%A0"><span class="toc-text">设备堆叠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E8%81%9A%E5%90%88"><span class="toc-text">链路聚合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-text">管理配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-text">ACL（访问控制列表）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%B4%E6%8A%A4"><span class="toc-text">维护</span></a></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/11/Linux.html"><span class="toc-text">Linux</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html"><span class="toc-text">虚拟化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/13/%E4%B8%AD%E9%97%B4%E4%BB%B6.html"><span class="toc-text">中间件</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/14/%E6%95%B0%E6%8D%AE%E5%BA%93.html"><span class="toc-text">数据库</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/15/%E5%AD%98%E5%82%A8.html"><span class="toc-text">存储</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/16/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监控</span></a></div></div></widget>
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">工具与效率</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/notes/1/Chome.html"><span class="toc-text">Chome</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/2/index.html"><span class="toc-text">Andriod</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/3/%E5%B8%B8%E7%94%A8%E5%B0%8F%E5%B7%A5%E5%85%B7.html"><span class="toc-text">常用小工具</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/4/%E5%B8%B8%E8%A7%81%E5%B0%8F%E9%97%AE%E9%A2%98.html"><span class="toc-text">常见小问题</span></a></div></div><div class="widget-header cap dis-select"><span class="name">挖个坑-慢慢填</span></div><div class="widget-body fs14"><div class="doc-tree active"><a class="doc-tree-link active" href="/notes/10/%E8%B7%AF%E7%94%B1%E4%BA%A4%E6%8D%A2.html"><span class="toc-text">路由交换</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%E5%B0%8F%E5%B7%A5%E5%85%B7"><span class="toc-text">局域网小工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%80%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="toc-text">开局配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP%EF%BC%9A%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">DHCP：工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#DHCP-Snooping%EF%BC%9A%E5%9C%BA%E6%99%AF"><span class="toc-text">DHCP Snooping：场景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%8E%AF%EF%BC%9A%E7%8E%AF%E8%B7%AF%E6%A3%80%E6%B5%8B"><span class="toc-text">防环：环路检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Telnet"><span class="toc-text">Telnet</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E5%A4%87%E5%A0%86%E5%8F%A0"><span class="toc-text">设备堆叠</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E8%B7%AF%E8%81%9A%E5%90%88"><span class="toc-text">链路聚合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-text">管理配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-text">ACL（访问控制列表）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%B4%E6%8A%A4"><span class="toc-text">维护</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VPN"><span class="toc-text">VPN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ipsec"><span class="toc-text">ipsec</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E4%BF%A1%E6%9C%8Daf%E6%96%B0%E6%9E%B6%E6%9E%84%EF%BC%9A"><span class="toc-text">深信服af新架构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%8E%E4%B8%BA%EF%BC%9A"><span class="toc-text">华为：</span></a></li></ol></li></ol></li></ol></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/11/Linux.html"><span class="toc-text">Linux</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/12/%E8%99%9A%E6%8B%9F%E5%8C%96.html"><span class="toc-text">虚拟化</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/13/%E4%B8%AD%E9%97%B4%E4%BB%B6.html"><span class="toc-text">中间件</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/14/%E6%95%B0%E6%8D%AE%E5%BA%93.html"><span class="toc-text">数据库</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/15/%E5%AD%98%E5%82%A8.html"><span class="toc-text">存储</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/notes/16/%E8%BF%90%E7%BB%B4%E7%9B%91%E6%8E%A7.html"><span class="toc-text">运维监控</span></a></div></div></widget>
 
 
 </div>
@@ -218,6 +218,41 @@
 <h1 id="维护"><a href="#维护" class="headerlink" title="维护"></a>维护</h1><p>释放某lip</p>
 <p>二层设别忘记密码？</p>
 <p>三层设备忘记密码？</p>
+<h1 id="VPN"><a href="#VPN" class="headerlink" title="VPN"></a>VPN</h1><h2 id="ipsec"><a href="#ipsec" class="headerlink" title="ipsec"></a>ipsec</h2><blockquote>
+<p>两端参数保持一致</p>
+</blockquote>
+<h3 id="深信服af新架构："><a href="#深信服af新架构：" class="headerlink" title="深信服af新架构："></a>深信服af新架构：</h3><p>一、 数据流</p>
+<ol>
+<li>配置vpn线路配置，IP配出口任意地址</li>
+<li>新增第三方设备，数据流必须每个网段分开单独添加。删掉现有所以协议 认证算法</li>
+<li>建议本段与对端地址，每个网段单独添加，</li>
+<li>参数建议为：协议:ESP 。加密算法：:AES256。认证算法:SHA2-256。PFS:group14</li>
+<li>优先级128</li>
+</ol>
+<p>二、放通策略</p>
+<ol>
+<li>区域：新建一个三层区域.引用vpntun接口(接口默认)</li>
+<li>控制策略：原&#x2F;目：lan与创建的区域。对象：两端互联的所有网段。其他any全部</li>
+</ol>
+<h3 id="华为："><a href="#华为：" class="headerlink" title="华为："></a>华为：</h3><blockquote>
+<p>配置需单独保存，否则重启会丢失配置</p>
+</blockquote>
+<p>一、数据流</p>
+<ol>
+<li><p>ID：本端出接口地址。对端接受任意。</p>
+</li>
+<li><p>数据源目地址组：必须手动添加，不可以引用地址或地址组（地址加掩码 巨坑）。两端网段保持一致</p>
+</li>
+<li><p>IKE参数：IKE版本都勾选 野蛮模式，认证 完整 PRF经量一致。DH参数对应深信服PFS参数。SA超时3600</p>
+</li>
+<li><p>IPSec参数：参照对端</p>
+</li>
+</ol>
+<p>二、策略（做源码不转换的NAT）</p>
+<ol>
+<li>转换模式：不转换。源地址：any或内网地址。</li>
+<li>目的地址;对端的内网地址.引用地址，不可以事地址组</li>
+</ol>
 
   
   
