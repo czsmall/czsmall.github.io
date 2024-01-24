@@ -30,8 +30,8 @@
 <meta property="og:site_name" content="小白记">
 <meta property="og:description" content="Centos7 | 初始设置|生产谨慎设置 (首次安装) 开启网卡并配置地址。    (首次安装) 关闭防火墙并设置永久关闭。   关闭开启查看状态      (首次安装) 关闭SElinux并设置永久关闭。    (首次安装) 更新。  (可选) 一键替换阿里yun源。      Centos7 | 软件安装编译依赖软件 yum install -y gcc gcc-c++ pcre pcre-">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-15T07:04:49.905Z">
-<meta property="article:modified_time" content="2023-12-15T07:04:49.905Z">
+<meta property="article:published_time" content="2023-12-30T02:35:21.621Z">
+<meta property="article:modified_time" content="2023-12-30T02:35:21.621Z">
 <meta property="article:author" content="czsmall">
 <meta name="twitter:card" content="summary">
   
@@ -142,7 +142,7 @@
 <p><strong>移除指定某信任ip，的某端口</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --remove-rich-rule=<span class="string">&quot;rule family=&quot;</span>ipv4<span class="string">&quot; source</span></span><br><span class="line"><span class="string">address=&quot;</span>192.168.44.101<span class="string">&quot; port port=&quot;</span>8080<span class="string">&quot; protocol=&quot;</span>tcp<span class="string">&quot; accept&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Centos7-常用命令"><a href="#Centos7-常用命令" class="headerlink" title="Centos7 | 常用命令"></a>Centos7 | 常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -tanlp</span><br></pre></td></tr></table></figure>
+<h2 id="Centos7-常用命令"><a href="#Centos7-常用命令" class="headerlink" title="Centos7 | 常用命令"></a>Centos7 | 常用命令</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -lnpt |grep 33060   <span class="comment">#查端口对应jing&#x27;c</span></span><br></pre></td></tr></table></figure>
 
 
 
